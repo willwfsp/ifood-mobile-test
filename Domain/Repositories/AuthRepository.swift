@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+public protocol AuthRepository {
+    func authenticate(completion: @escaping (Bool) -> ())
+}

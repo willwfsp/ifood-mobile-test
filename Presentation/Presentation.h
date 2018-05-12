@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-ØØ
+
 //! Project version number for Presentation.
 FOUNDATION_EXPORT double PresentationVersionNumber;
 

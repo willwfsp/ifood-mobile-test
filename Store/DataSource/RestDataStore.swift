@@ -10,8 +10,9 @@ import Foundation
 import Utils
 import Moya
 
-struct RestDataSource<T: TargetType> {
-    func request(_ target: T, completion: @escaping (Result<JsonResult>) -> ()) {
+public struct RestDataSource<T: TargetType> {
+    public init() {}
+    public func request(_ target: T, completion: @escaping (Result<JsonResult>) -> ()) {
         let provider = MoyaProvider<T>()
         
         provider.request(target) {

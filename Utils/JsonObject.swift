@@ -27,6 +27,20 @@ public enum JsonResult: Equatable {
         }
     }
     
+    public var object: JsonObject? {
+        if case let .object(json) = self {
+            return json
+        }
+        return nil
+    }
+    
+    public var array: JsonArray? {
+        if case let .array(json) = self {
+            return json
+        }
+        return nil
+    }
+    
     public static func ==(lhs: JsonResult, rhs: JsonResult) -> Bool {
         switch (lhs, rhs) {
         case (.object, .object), (.array, .array):

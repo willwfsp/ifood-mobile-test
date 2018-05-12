@@ -30,10 +30,21 @@
 		7DB56D5120A7287B00D240AF /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB56D4F20A7287B00D240AF /* Moya.framework */; };
 		7DB56D5220A7287B00D240AF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB56D5020A7287B00D240AF /* Alamofire.framework */; };
 		7DB56D5420A728E300D240AF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB56D5020A7287B00D240AF /* Alamofire.framework */; };
-		7DB56D5520A728E600D240AF /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB56D4F20A7287B00D240AF /* Moya.framework */; };
 		7DB56D5720A7373800D240AF /* RestDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB56D5620A7373800D240AF /* RestDataStore.swift */; };
 		7DB56D5920A737D500D240AF /* TwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB56D5820A737D500D240AF /* TwitterService.swift */; };
 		7DB56D5B20A73CC700D240AF /* Nonce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB56D5A20A73CC700D240AF /* Nonce.swift */; };
+		7DB56D5E20A7545F00D240AF /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB56D5D20A7545F00D240AF /* AuthRepository.swift */; };
+		7DB56D6020A754BA00D240AF /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB56D5F20A754BA00D240AF /* AuthRepository.swift */; };
+		7DB56D6220A755E500D240AF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB56D6120A755E500D240AF /* SearchViewController.swift */; };
+		7DB56D6420A758AB00D240AF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB56D5020A7287B00D240AF /* Alamofire.framework */; };
+		7DB56D6520A758AB00D240AF /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB56D5020A7287B00D240AF /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7DB56D6620A758AB00D240AF /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB56D4F20A7287B00D240AF /* Moya.framework */; };
+		7DB56D6720A758AB00D240AF /* Moya.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB56D4F20A7287B00D240AF /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7DB56D7120A75D4D00D240AF /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB56D7020A75D4D00D240AF /* Result.framework */; };
+		7DB56D7220A75D4D00D240AF /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB56D7020A75D4D00D240AF /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7DB56D7420A764D900D240AF /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB56D7320A764D800D240AF /* Token.swift */; };
+		7DB56D7720A7654100D240AF /* Token+JsonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB56D7620A7654100D240AF /* Token+JsonObject.swift */; };
+		7DB56D7920A766DB00D240AF /* KeychainDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB56D7820A766DB00D240AF /* KeychainDataSource.swift */; };
 		7DCC3DEB20A68DE200D9C268 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCC3DE220A68DE100D9C268 /* Presentation.framework */; };
 		7DCC3DF220A68DE200D9C268 /* PresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC3DF120A68DE200D9C268 /* PresentationTests.swift */; };
 		7DCC3DF420A68DE200D9C268 /* Presentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DCC3DE420A68DE200D9C268 /* Presentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -161,8 +172,11 @@
 			dstSubfolderSpec = 10;
 			files = (
 				7DCC3E1A20A68DEC00D9C268 /* Store.framework in Embed Frameworks */,
+				7DB56D7220A75D4D00D240AF /* Result.framework in Embed Frameworks */,
 				7D05D96A20A645C500CDF23C /* Domain.framework in Embed Frameworks */,
 				7D05D94720A6452F00CDF23C /* Utils.framework in Embed Frameworks */,
+				7DB56D6520A758AB00D240AF /* Alamofire.framework in Embed Frameworks */,
+				7DB56D6720A758AB00D240AF /* Moya.framework in Embed Frameworks */,
 				7DCC3DF820A68DE200D9C268 /* Presentation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -195,6 +209,13 @@
 		7DB56D5620A7373800D240AF /* RestDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestDataStore.swift; sourceTree = "<group>"; };
 		7DB56D5820A737D500D240AF /* TwitterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterService.swift; sourceTree = "<group>"; };
 		7DB56D5A20A73CC700D240AF /* Nonce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nonce.swift; sourceTree = "<group>"; };
+		7DB56D5D20A7545F00D240AF /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		7DB56D5F20A754BA00D240AF /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		7DB56D6120A755E500D240AF /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		7DB56D7020A75D4D00D240AF /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		7DB56D7320A764D800D240AF /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		7DB56D7620A7654100D240AF /* Token+JsonObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Token+JsonObject.swift"; sourceTree = "<group>"; };
+		7DB56D7820A766DB00D240AF /* KeychainDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainDataSource.swift; sourceTree = "<group>"; };
 		7DCC3DE220A68DE100D9C268 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DCC3DE420A68DE200D9C268 /* Presentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presentation.h; sourceTree = "<group>"; };
 		7DCC3DEA20A68DE200D9C268 /* PresentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,8 +242,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DCC3E1920A68DEC00D9C268 /* Store.framework in Frameworks */,
+				7DB56D7120A75D4D00D240AF /* Result.framework in Frameworks */,
 				7D05D96920A645C500CDF23C /* Domain.framework in Frameworks */,
 				7D05D94620A6452F00CDF23C /* Utils.framework in Frameworks */,
+				7DB56D6420A758AB00D240AF /* Alamofire.framework in Frameworks */,
+				7DB56D6620A758AB00D240AF /* Moya.framework in Frameworks */,
 				7DCC3DF720A68DE200D9C268 /* Presentation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,7 +317,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DCC3E0D20A68DEC00D9C268 /* Store.framework in Frameworks */,
-				7DB56D5520A728E600D240AF /* Moya.framework in Frameworks */,
 				7DB56D5420A728E300D240AF /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +423,7 @@
 			isa = PBXGroup;
 			children = (
 				7DB56D3D20A6A24F00D240AF /* UserRepository.swift */,
+				7DB56D5F20A754BA00D240AF /* AuthRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -431,11 +455,28 @@
 		7DB56D4D20A727EC00D240AF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7DB56D7020A75D4D00D240AF /* Result.framework */,
 				7DB56D5020A7287B00D240AF /* Alamofire.framework */,
 				7DB56D4F20A7287B00D240AF /* Moya.framework */,
 				7DB56D4E20A7281200D240AF /* Cartfile */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DB56D5C20A7544700D240AF /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				7DB56D5D20A7545F00D240AF /* AuthRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		7DB56D7520A7653000D240AF /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				7DB56D7620A7654100D240AF /* Token+JsonObject.swift */,
+			);
+			path = Mappers;
 			sourceTree = "<group>";
 		};
 		7DCC3DE320A68DE200D9C268 /* Presentation */ = {
@@ -459,6 +500,8 @@
 		7DCC3E0520A68DEC00D9C268 /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				7DB56D7520A7653000D240AF /* Mappers */,
+				7DB56D5C20A7544700D240AF /* Repositories */,
 				7DCC3E4420A695C600D9C268 /* DataSource */,
 				7DCC3E1220A68DEC00D9C268 /* Tests */,
 				7DCC3E0620A68DEC00D9C268 /* Store.h */,
@@ -490,6 +533,7 @@
 				7DCC3E4520A695F000D9C268 /* DataSource.swift */,
 				7DB56D5620A7373800D240AF /* RestDataStore.swift */,
 				7DB56D5820A737D500D240AF /* TwitterService.swift */,
+				7DB56D7820A766DB00D240AF /* KeychainDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -498,6 +542,7 @@
 			isa = PBXGroup;
 			children = (
 				7DCC3E5220A69CF000D9C268 /* Search.storyboard */,
+				7DB56D6120A755E500D240AF /* SearchViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -506,6 +551,7 @@
 			isa = PBXGroup;
 			children = (
 				7DCC3E5820A6A13700D9C268 /* User.swift */,
+				7DB56D7320A764D800D240AF /* Token.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -556,6 +602,7 @@
 				7D05D8F820A644F100CDF23C /* Frameworks */,
 				7D05D8F920A644F100CDF23C /* Resources */,
 				7D05D94B20A6452F00CDF23C /* Embed Frameworks */,
+				7DB56D6820A7595500D240AF /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -707,7 +754,6 @@
 				7DCC3E0020A68DEC00D9C268 /* Frameworks */,
 				7DCC3E0120A68DEC00D9C268 /* Headers */,
 				7DCC3E0220A68DEC00D9C268 /* Resources */,
-				7DB56D5320A7289400D240AF /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -772,6 +818,7 @@
 					};
 					7DCC3DE120A68DE100D9C268 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					7DCC3DE920A68DE200D9C268 = {
 						CreatedOnToolsVersion = 9.3;
@@ -894,21 +941,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7DB56D5320A7289400D240AF /* Carthage */ = {
+		7DB56D6820A7595500D240AF /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 			);
 			name = Carthage;
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks ";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -956,8 +1005,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DCC3E2920A694DF00D9C268 /* UseCase.swift in Sources */,
+				7DB56D7420A764D900D240AF /* Token.swift in Sources */,
 				7DB56D4120A719C900D240AF /* Errors.swift in Sources */,
 				7DCC3E5620A6A0AE00D9C268 /* SearchUsersUseCase.swift in Sources */,
+				7DB56D6020A754BA00D240AF /* AuthRepository.swift in Sources */,
 				7DB56D3E20A6A24F00D240AF /* UserRepository.swift in Sources */,
 				7DCC3E5920A6A13700D9C268 /* User.swift in Sources */,
 			);
@@ -977,6 +1028,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DB56D6220A755E500D240AF /* SearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -993,8 +1045,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DB56D7920A766DB00D240AF /* KeychainDataSource.swift in Sources */,
 				7DCC3E4620A695F000D9C268 /* DataSource.swift in Sources */,
 				7DB56D5720A7373800D240AF /* RestDataStore.swift in Sources */,
+				7DB56D5E20A7545F00D240AF /* AuthRepository.swift in Sources */,
+				7DB56D7720A7654100D240AF /* Token+JsonObject.swift in Sources */,
 				7DB56D5920A737D500D240AF /* TwitterService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1209,6 +1264,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Humour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1227,6 +1287,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Humour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1472,6 +1537,7 @@
 		7DCC3DFA20A68DE200D9C268 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1489,6 +1555,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.policiano.Presentation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1499,6 +1566,7 @@
 		7DCC3DFB20A68DE200D9C268 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1575,6 +1643,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Humour/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1608,6 +1677,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Humour/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1634,6 +1704,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Humour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1657,6 +1728,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Humour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
