@@ -20,11 +20,13 @@ public enum JsonError: Error, Equatable {
     case isNotJsonObject
     case malformed
     case missingField(String)
+    case couldNotCastToJsonResult
     
     public static func ==(lhs: JsonError, rhs: JsonError) -> Bool {
         switch (lhs, rhs) {
         case (.isNotJsonObject, .isNotJsonObject),
-             (.malformed, .malformed): return true
+             (.malformed, .malformed),
+             (.couldNotCastToJsonResult, .couldNotCastToJsonResult): return true
         case let (.missingField(l), .missingField(r)): return l == r
         default: return false
         }
