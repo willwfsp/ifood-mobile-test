@@ -12,7 +12,6 @@
 		7D05D90920A644F400CDF23C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D05D90720A644F400CDF23C /* LaunchScreen.storyboard */; };
 		7D05D91420A644F400CDF23C /* HumourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D05D91320A644F400CDF23C /* HumourTests.swift */; };
 		7D05D93A20A6452F00CDF23C /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D05D93120A6452F00CDF23C /* Utils.framework */; };
-		7D05D94120A6452F00CDF23C /* UtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D05D94020A6452F00CDF23C /* UtilsTests.swift */; };
 		7D05D94320A6452F00CDF23C /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D05D93320A6452F00CDF23C /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D05D94620A6452F00CDF23C /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D05D93120A6452F00CDF23C /* Utils.framework */; };
 		7D05D94720A6452F00CDF23C /* Utils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D05D93120A6452F00CDF23C /* Utils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -32,6 +31,16 @@
 		7DCC3E1920A68DEC00D9C268 /* Store.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCC3E0420A68DEC00D9C268 /* Store.framework */; };
 		7DCC3E1A20A68DEC00D9C268 /* Store.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCC3E0420A68DEC00D9C268 /* Store.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7DCC3E2320A690CC00D9C268 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 7DCC3E2220A690CC00D9C268 /* Cartfile */; };
+		7DCC3E2920A694DF00D9C268 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC3E2820A694DF00D9C268 /* UseCase.swift */; };
+		7DCC3E3920A6953B00D9C268 /* FileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC3E3420A6953600D9C268 /* FileProvider.swift */; };
+		7DCC3E3B20A6953B00D9C268 /* JsonProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC3E3620A6953800D9C268 /* JsonProvider.swift */; };
+		7DCC3E3C20A6953B00D9C268 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC3E3720A6953900D9C268 /* Errors.swift */; };
+		7DCC3E3D20A6953B00D9C268 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC3E3820A6953A00D9C268 /* Result.swift */; };
+		7DCC3E4220A6959200D9C268 /* JsonProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC3E3E20A6956C00D9C268 /* JsonProviderTests.swift */; };
+		7DCC3E4320A6959500D9C268 /* ResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC3E3F20A6956E00D9C268 /* ResultTests.swift */; };
+		7DCC3E4620A695F000D9C268 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC3E4520A695F000D9C268 /* DataSource.swift */; };
+		7DCC3E4720A6964100D9C268 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D05D90A20A644F400CDF23C /* Info.plist */; };
+		7DCC3E4820A6964A00D9C268 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D05D90A20A644F400CDF23C /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,7 +165,6 @@
 		7D05D93120A6452F00CDF23C /* Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D05D93320A6452F00CDF23C /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		7D05D93920A6452F00CDF23C /* UtilsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UtilsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D05D94020A6452F00CDF23C /* UtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsTests.swift; sourceTree = "<group>"; };
 		7D05D95420A645C400CDF23C /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D05D95620A645C400CDF23C /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		7D05D95C20A645C500CDF23C /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,7 +177,15 @@
 		7DCC3E0620A68DEC00D9C268 /* Store.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
 		7DCC3E0C20A68DEC00D9C268 /* StoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DCC3E1320A68DEC00D9C268 /* StoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTests.swift; sourceTree = "<group>"; };
-		7DCC3E2220A690CC00D9C268 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		7DCC3E2220A690CC00D9C268 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Cartfile; path = ../Cartfile; sourceTree = "<group>"; };
+		7DCC3E2820A694DF00D9C268 /* UseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		7DCC3E3420A6953600D9C268 /* FileProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileProvider.swift; sourceTree = "<group>"; };
+		7DCC3E3620A6953800D9C268 /* JsonProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonProvider.swift; sourceTree = "<group>"; };
+		7DCC3E3720A6953900D9C268 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		7DCC3E3820A6953A00D9C268 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		7DCC3E3E20A6956C00D9C268 /* JsonProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonProviderTests.swift; sourceTree = "<group>"; };
+		7DCC3E3F20A6956E00D9C268 /* ResultTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTests.swift; sourceTree = "<group>"; };
+		7DCC3E4520A695F000D9C268 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +323,10 @@
 		7D05D93220A6452F00CDF23C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				7DCC3E3720A6953900D9C268 /* Errors.swift */,
+				7DCC3E3420A6953600D9C268 /* FileProvider.swift */,
+				7DCC3E3620A6953800D9C268 /* JsonProvider.swift */,
+				7DCC3E3820A6953A00D9C268 /* Result.swift */,
 				7D05D93F20A6452F00CDF23C /* Tests */,
 				7D05D93320A6452F00CDF23C /* Utils.h */,
 			);
@@ -316,7 +336,8 @@
 		7D05D93F20A6452F00CDF23C /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				7D05D94020A6452F00CDF23C /* UtilsTests.swift */,
+				7DCC3E3E20A6956C00D9C268 /* JsonProviderTests.swift */,
+				7DCC3E3F20A6956E00D9C268 /* ResultTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -341,6 +362,7 @@
 		7DCC3DE320A68DE200D9C268 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				7DCC3E2720A6948F00D9C268 /* Use Cases */,
 				7DCC3DF020A68DE200D9C268 /* Tests */,
 				7DCC3DE420A68DE200D9C268 /* Presentation.h */,
 			);
@@ -358,6 +380,7 @@
 		7DCC3E0520A68DEC00D9C268 /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				7DCC3E4420A695C600D9C268 /* DataSource */,
 				7DCC3E1220A68DEC00D9C268 /* Tests */,
 				7DCC3E0620A68DEC00D9C268 /* Store.h */,
 			);
@@ -378,6 +401,23 @@
 				7DCC3E2220A690CC00D9C268 /* Cartfile */,
 			);
 			path = Libs;
+			sourceTree = "<group>";
+		};
+		7DCC3E2720A6948F00D9C268 /* Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+				7DCC3E2820A694DF00D9C268 /* UseCase.swift */,
+			);
+			name = "Use Cases";
+			path = useCases;
+			sourceTree = "<group>";
+		};
+		7DCC3E4420A695C600D9C268 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				7DCC3E4520A695F000D9C268 /* DataSource.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -625,6 +665,7 @@
 					};
 					7D05D93020A6452F00CDF23C = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					7D05D93820A6452F00CDF23C = {
 						CreatedOnToolsVersion = 9.3;
@@ -632,6 +673,7 @@
 					};
 					7D05D95320A645C400CDF23C = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					7D05D95B20A645C500CDF23C = {
 						CreatedOnToolsVersion = 9.3;
@@ -646,6 +688,7 @@
 					};
 					7DCC3E0320A68DEC00D9C268 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					7DCC3E0B20A68DEC00D9C268 = {
 						CreatedOnToolsVersion = 9.3;
@@ -685,6 +728,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DCC3E4720A6964100D9C268 /* Info.plist in Resources */,
 				7DCC3E2320A690CC00D9C268 /* Cartfile in Resources */,
 				7D05D90920A644F400CDF23C /* LaunchScreen.storyboard in Resources */,
 				7D05D90620A644F400CDF23C /* Assets.xcassets in Resources */,
@@ -702,6 +746,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DCC3E4820A6964A00D9C268 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -777,6 +822,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DCC3E3C20A6953B00D9C268 /* Errors.swift in Sources */,
+				7DCC3E3D20A6953B00D9C268 /* Result.swift in Sources */,
+				7DCC3E3920A6953B00D9C268 /* FileProvider.swift in Sources */,
+				7DCC3E3B20A6953B00D9C268 /* JsonProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -784,7 +833,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D05D94120A6452F00CDF23C /* UtilsTests.swift in Sources */,
+				7DCC3E4320A6959500D9C268 /* ResultTests.swift in Sources */,
+				7DCC3E4220A6959200D9C268 /* JsonProviderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -792,6 +842,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DCC3E2920A694DF00D9C268 /* UseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -822,6 +873,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DCC3E4620A695F000D9C268 /* DataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1032,6 +1084,7 @@
 		7D05D92420A644F400CDF23C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Humour/Info.plist;
@@ -1049,6 +1102,7 @@
 		7D05D92520A644F400CDF23C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Humour/Info.plist;
@@ -1106,6 +1160,7 @@
 		7D05D94920A6452F00CDF23C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1113,7 +1168,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Humor/Info.plist;
+				INFOPLIST_FILE = Humour/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1123,6 +1178,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.policiano.Utils;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1133,6 +1189,7 @@
 		7D05D94A20A6452F00CDF23C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1140,7 +1197,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Humor/Info.plist;
+				INFOPLIST_FILE = Humour/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1162,7 +1219,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Humor/Info.plist;
+				INFOPLIST_FILE = Humour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1181,7 +1238,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Humor/Info.plist;
+				INFOPLIST_FILE = Humour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1198,6 +1255,7 @@
 		7D05D96C20A645C500CDF23C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1205,7 +1263,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Humor/Info.plist;
+				INFOPLIST_FILE = Humour/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1215,6 +1273,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.policiano.Domain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1225,6 +1284,7 @@
 		7D05D96D20A645C500CDF23C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1232,7 +1292,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Humor/Info.plist;
+				INFOPLIST_FILE = Humour/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1254,7 +1314,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Humor/Info.plist;
+				INFOPLIST_FILE = Humour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1273,7 +1333,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Humor/Info.plist;
+				INFOPLIST_FILE = Humour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1297,7 +1357,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Humor/Info.plist;
+				INFOPLIST_FILE = Humour/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1324,7 +1384,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Humor/Info.plist;
+				INFOPLIST_FILE = Humour/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1346,7 +1406,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Humor/Info.plist;
+				INFOPLIST_FILE = Humour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1365,7 +1425,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Humor/Info.plist;
+				INFOPLIST_FILE = Humour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1382,6 +1442,7 @@
 		7DCC3E1C20A68DEC00D9C268 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1389,7 +1450,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Humor/Info.plist;
+				INFOPLIST_FILE = Humour/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1399,6 +1460,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.policiano.Store;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1409,6 +1471,7 @@
 		7DCC3E1D20A68DEC00D9C268 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1416,7 +1479,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Humor/Info.plist;
+				INFOPLIST_FILE = Humour/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1438,7 +1501,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Humor/Info.plist;
+				INFOPLIST_FILE = Humour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1457,7 +1520,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Humor/Info.plist;
+				INFOPLIST_FILE = Humour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
