@@ -31,6 +31,9 @@
 		7DB56D5220A7287B00D240AF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB56D5020A7287B00D240AF /* Alamofire.framework */; };
 		7DB56D5420A728E300D240AF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB56D5020A7287B00D240AF /* Alamofire.framework */; };
 		7DB56D5520A728E600D240AF /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB56D4F20A7287B00D240AF /* Moya.framework */; };
+		7DB56D5720A7373800D240AF /* RestDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB56D5620A7373800D240AF /* RestDataStore.swift */; };
+		7DB56D5920A737D500D240AF /* TwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB56D5820A737D500D240AF /* TwitterService.swift */; };
+		7DB56D5B20A73CC700D240AF /* Nonce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB56D5A20A73CC700D240AF /* Nonce.swift */; };
 		7DCC3DEB20A68DE200D9C268 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCC3DE220A68DE100D9C268 /* Presentation.framework */; };
 		7DCC3DF220A68DE200D9C268 /* PresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC3DF120A68DE200D9C268 /* PresentationTests.swift */; };
 		7DCC3DF420A68DE200D9C268 /* Presentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DCC3DE420A68DE200D9C268 /* Presentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -189,6 +192,9 @@
 		7DB56D4E20A7281200D240AF /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		7DB56D4F20A7287B00D240AF /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
 		7DB56D5020A7287B00D240AF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		7DB56D5620A7373800D240AF /* RestDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestDataStore.swift; sourceTree = "<group>"; };
+		7DB56D5820A737D500D240AF /* TwitterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterService.swift; sourceTree = "<group>"; };
+		7DB56D5A20A73CC700D240AF /* Nonce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nonce.swift; sourceTree = "<group>"; };
 		7DCC3DE220A68DE100D9C268 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DCC3DE420A68DE200D9C268 /* Presentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presentation.h; sourceTree = "<group>"; };
 		7DCC3DEA20A68DE200D9C268 /* PresentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -355,6 +361,7 @@
 				7DB56D4320A71BA000D240AF /* XCTest.swift */,
 				7D05D93F20A6452F00CDF23C /* Tests */,
 				7D05D93320A6452F00CDF23C /* Utils.h */,
+				7DB56D5A20A73CC700D240AF /* Nonce.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -481,6 +488,8 @@
 			isa = PBXGroup;
 			children = (
 				7DCC3E4520A695F000D9C268 /* DataSource.swift */,
+				7DB56D5620A7373800D240AF /* RestDataStore.swift */,
+				7DB56D5820A737D500D240AF /* TwitterService.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -929,6 +938,7 @@
 				7DCC3E3D20A6953B00D9C268 /* Result.swift in Sources */,
 				7DCC3E3920A6953B00D9C268 /* FileProvider.swift in Sources */,
 				7DCC3E3B20A6953B00D9C268 /* JsonObject.swift in Sources */,
+				7DB56D5B20A73CC700D240AF /* Nonce.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -984,6 +994,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DCC3E4620A695F000D9C268 /* DataSource.swift in Sources */,
+				7DB56D5720A7373800D240AF /* RestDataStore.swift in Sources */,
+				7DB56D5920A737D500D240AF /* TwitterService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
