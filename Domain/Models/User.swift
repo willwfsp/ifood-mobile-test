@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct User {
+public struct User {
     
 }

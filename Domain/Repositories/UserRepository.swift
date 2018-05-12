@@ -9,6 +9,6 @@
 import Foundation
 import Utils
 
-protocol UserRepository {
+public protocol UserRepository {
     func searchUsers(term: String, completion: (Result<[User]>) -> ())
 }

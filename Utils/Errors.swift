@@ -8,6 +8,10 @@
 
 import Foundation
 
+public enum GenericError: Error {
+    
+}
+
 public enum FileError: Error {
     case notFound
 }

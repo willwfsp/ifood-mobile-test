@@ -27,7 +27,8 @@ struct SearchUsersUseCase: UseCase {
 
     func execute(request: Request? = nil, completion: (Result<[User]>) -> ()) {
         guard let request = request else {
-            return // TODO: Criar um erro de request
+            completion(.failure(error: DomainError.missingRequest(onUseCase: "SearchUsersUseCase")))
+            return
         }
         repository.searchUsers(term: request.term) { completion($0) }
     }
