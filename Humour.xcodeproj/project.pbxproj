@@ -31,6 +31,7 @@
 		7DCC3E1620A68DEC00D9C268 /* Store.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DCC3E0620A68DEC00D9C268 /* Store.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7DCC3E1920A68DEC00D9C268 /* Store.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCC3E0420A68DEC00D9C268 /* Store.framework */; };
 		7DCC3E1A20A68DEC00D9C268 /* Store.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCC3E0420A68DEC00D9C268 /* Store.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7DCC3E2320A690CC00D9C268 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 7DCC3E2220A690CC00D9C268 /* Cartfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +169,7 @@
 		7DCC3E0620A68DEC00D9C268 /* Store.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
 		7DCC3E0C20A68DEC00D9C268 /* StoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DCC3E1320A68DEC00D9C268 /* StoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTests.swift; sourceTree = "<group>"; };
+		7DCC3E2220A690CC00D9C268 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +257,7 @@
 		7D05D8F220A644F100CDF23C = {
 			isa = PBXGroup;
 			children = (
+				7DCC3E2120A690B000D9C268 /* Libs */,
 				7D05D8FD20A644F100CDF23C /* Humour */,
 				7DCC3DE320A68DE200D9C268 /* Presentation */,
 				7D05D95520A645C400CDF23C /* Domain */,
@@ -367,6 +370,14 @@
 				7DCC3E1320A68DEC00D9C268 /* StoreTests.swift */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		7DCC3E2120A690B000D9C268 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				7DCC3E2220A690CC00D9C268 /* Cartfile */,
+			);
+			path = Libs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -674,6 +685,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DCC3E2320A690CC00D9C268 /* Cartfile in Resources */,
 				7D05D90920A644F400CDF23C /* LaunchScreen.storyboard in Resources */,
 				7D05D90620A644F400CDF23C /* Assets.xcassets in Resources */,
 			);
