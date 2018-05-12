@@ -11,5 +11,6 @@ import Utils
 
 public protocol UseCase {
     associatedtype T
-    func execute(completion: (Result<T>) -> ())
+    associatedtype R
+    func execute(request: R?, completion: (Result<T>) -> ())
 }
