@@ -9,5 +9,9 @@
 import Foundation
 
 public struct User {
-    
+    public let id: UInt
+    public let name: String?
+    public let screenName: String?
+    public let profileImageUrl: String?
+    public let profileBackgroundImageUrl: String?
 }
