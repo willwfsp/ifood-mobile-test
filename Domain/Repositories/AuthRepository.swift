@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import Utils
 
 public protocol AuthRepository {
-    func authenticate(completion: @escaping (Bool) -> ())
+    func authenticate(completion: @escaping (Result<Token>) -> ())
 }

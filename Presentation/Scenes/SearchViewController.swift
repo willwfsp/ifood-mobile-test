@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Domain
+import Utils
 import Store
 
 class SearchViewController: UIViewController {
@@ -21,8 +23,16 @@ class SearchViewController: UIViewController {
         let dataSource = RestDataSource<TwitterService>()
         let repository = AuthRepository(restDataSource: dataSource, keyChainDataSource: KeychainDataSource.shared)
         
-        repository.authenticate { (success) in
+        
+        
+        repository.authenticate {
+            guard let accessToken = $0.data?.accessToken
+                else { return }
             
+            let userRepository = UserRepository(dataSource: dataSource, token: accessToken)
+            userRepository.searchUsers(term: "WPoliciano") { (result) in
+                
+            }
         }
     }
     

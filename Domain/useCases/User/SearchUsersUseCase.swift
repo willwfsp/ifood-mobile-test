@@ -25,7 +25,7 @@ struct SearchUsersUseCase: UseCase {
         self.repository = repository
     }
 
-    func execute(request: Request? = nil, completion: (Result<[User]>) -> ()) {
+    func execute(request: Request? = nil, completion: @escaping (Result<[User]>) -> ()) {
         guard let request = request else {
             completion(.failure(error: DomainError.missingRequest(onUseCase: "SearchUsersUseCase")))
             return

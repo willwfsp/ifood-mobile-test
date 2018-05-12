@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Utils
 import Domain
 
 public struct AuthRepository: Domain.AuthRepository {
@@ -18,26 +19,23 @@ public struct AuthRepository: Domain.AuthRepository {
         self.keyChainDataSource = keyChainDataSource
     }
     
-    public func authenticate(completion: @escaping (Bool) -> ()) {
-        restDataSource.request(.token) {
+    public func authenticate(completion: @escaping (Result<Token>) -> ()) {
+        restDataSource.request(.token, token: "R0l1RWRlNGR2MUo4RDdJVkwzRGNJbzMzTjpQM3dJSjN5Y2pQSW5CUzRsbG94OGJrZW40M1lVY2NmRHV1STVwSFFCZmJnMWh5T0tJNw==") {
             switch $0 {
             case let .success(jsonResult):
-                guard let json = jsonResult.object else {
-                    completion(false)
-                    return
-                }
                 
-                guard let token = try? Token(with: json) else {
-                    completion(false)
-                    return
+                do {
+                    guard let json = jsonResult.object
+                        else { throw JsonError.malformed }
+                    
+                    let token = try Token(with: json)
+                    completion(.success(data: token))
+                } catch {
+                    completion(.failure(error: error))
                 }
-                typealias Key = KeychainDataSource.Key
-                
-                // Provisório
-                KeychainDataSource.shared.save(value: token.accessToken, forKey: Key.accessToken)
-                completion(true)
-            case .failure:
-                completion(false)
+
+            case let .failure(error):
+                completion(.failure(error: error))
             }
         }
     }

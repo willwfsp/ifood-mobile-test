@@ -12,5 +12,5 @@ import Utils
 public protocol UseCase {
     associatedtype T
     associatedtype R
-    func execute(request: R?, completion: (Result<T>) -> ())
+    func execute(request: R?, completion: @escaping (Result<T>) -> ())
 }

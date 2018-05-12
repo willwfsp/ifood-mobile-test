@@ -15,7 +15,8 @@ public enum TwitterService {
     case searchUsers(term: String)
 }
 
-extension TwitterService: TargetType {
+extension TwitterService: TargetType, AccessTokenAuthorizable {
+    
     var version: String { return "/1.1/" }
     public var baseURL: URL { return URL(string: "https://api.twitter.com")! }
     
@@ -25,6 +26,13 @@ extension TwitterService: TargetType {
             return "/oauth2/token"
         case .searchUsers:
             return "\(version)users/search.json"
+        }
+    }
+    
+    public var authorizationType: AuthorizationType {
+        switch self {
+        case .token: return .basic
+        case .searchUsers: return .bearer
         }
     }
     
@@ -58,10 +66,10 @@ extension TwitterService: TargetType {
         switch self {
         case .token:
             return [
-                "Authorization" : "Basic R0l1RWRlNGR2MUo4RDdJVkwzRGNJbzMzTjpQM3dJSjN5Y2pQSW5CUzRsbG94OGJrZW40M1lVY2NmRHV1STVwSFFCZmJnMWh5T0tJNw==",
+                //"Authorization" : "Basic R0l1RWRlNGR2MUo4RDdJVkwzRGNJbzMzTjpQM3dJSjN5Y2pQSW5CUzRsbG94OGJrZW40M1lVY2NmRHV1STVwSFFCZmJnMWh5T0tJNw==",
                 "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"]
         case .searchUsers:
-            return ["Authorization" : "Bearer AAAAAAAAAAAAAAAAAAAAAOpI6AAAAAAAFsYQHz7MOwBWS%2F5JPhZUprNtLiM%3DolcI8nGnPyq8D1CXuqjWJJ2hcbhsaC6RdkwE5bhL4KLr4c8Jh6"]
+            return nil//["Authorization" : "Bearer AAAAAAAAAAAAAAAAAAAAAOpI6AAAAAAAFsYQHz7MOwBWS%2F5JPhZUprNtLiM%3DolcI8nGnPyq8D1CXuqjWJJ2hcbhsaC6RdkwE5bhL4KLr4c8Jh6"]
         }
         
     }

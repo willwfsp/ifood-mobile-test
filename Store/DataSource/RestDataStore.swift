@@ -12,8 +12,15 @@ import Moya
 
 public struct RestDataSource<T: TargetType> {
     public init() {}
-    public func request(_ target: T, completion: @escaping (Result<JsonResult>) -> ()) {
-        let provider = MoyaProvider<T>()
+    public func request(_ target: T, token: String? = nil, completion: @escaping (Result<JsonResult>) -> ()) {
+
+        var provider = MoyaProvider<T>()
+        
+        if let token = token {
+            let authPlugin = AccessTokenPlugin(tokenClosure: token)
+            provider = MoyaProvider<T>(plugins: [authPlugin, NetworkLoggerPlugin(verbose: true)])
+        }
+        
         
         provider.request(target) {
             switch $0 {

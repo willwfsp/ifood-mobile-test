@@ -10,5 +10,5 @@ import Foundation
 import Utils
 
 public protocol UserRepository {
-    func searchUsers(term: String, completion: (Result<[User]>) -> ())
+    func searchUsers(term: String, completion: @escaping (Result<[User]>) -> ())
 }
