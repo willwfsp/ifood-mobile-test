@@ -53,6 +53,23 @@ public struct UserRepository: Domain.UserRepository {
         }
     }
     
+    public func friends(userId: String, completion: @escaping (Result<[User]>) -> ()) {
+        dataSource.request(.friends(userId: userId)) {
+            switch $0 {
+            case let .success(jsonResult):
+                do {
+                    let friends: Friends = try jsonResult.map()
+                    completion(.success(data: friends.users))
+                } catch {
+                    completion(.failure(error: error))
+                }
+                
+            case let .failure(error):
+                completion(.failure(error: error))
+            }
+        }
+    }
+    
     func compactMap(list: JsonArray) throws -> [User] {
         return try list.compactMap { try User(with: $0) }
     }

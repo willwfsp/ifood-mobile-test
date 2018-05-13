@@ -29,6 +29,7 @@ extension TargetType {
 enum TwitterService {
     case searchUsers(term: String)
     case timeline(userId: String)
+    case friends(userId: String)
 }
 
 extension TwitterService: TargetType {
@@ -42,6 +43,8 @@ extension TwitterService: TargetType {
             return "/1.1/users/search.json"
         case .timeline:
             return "/1.1/statuses/user_timeline.json"
+        case .friends:
+            return "/1.1/friends/list.json"
         }
         
     }
@@ -55,6 +58,8 @@ extension TwitterService: TargetType {
         case let .searchUsers(term):
             return ["q" : term]
         case let .timeline(userId):
+            return ["user_id" : userId]
+        case let .friends(userId):
             return ["user_id" : userId]
         }
     }
