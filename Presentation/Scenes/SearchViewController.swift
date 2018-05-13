@@ -14,6 +14,7 @@ import Domain
 class SearchViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var activityIndicatorView: UIActivityIndicatorView!
     
     var collapseDetailViewController = true
     
@@ -27,7 +28,6 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         setupTable()
         request()
-        splitViewController?.delegate = self
     }
     
     func setupTable() {
@@ -40,26 +40,19 @@ class SearchViewController: UIViewController {
         let userRepository = UserRepository(dataSource: dataSource)
         let sessionRepository = SessionRepository(dataSource: dataSource)
         let useCase = GetLoggedUserFriendsUseCase(userRepository: userRepository, sessionRepository: sessionRepository)
-        
+        activityIndicatorView.startAnimating()
+        tableView.isHidden = true
         useCase.execute {
             if case let .success(data) = $0 {
                 self.data = data
             }
+            self.activityIndicatorView.stopAnimating()
+            self.tableView.isHidden = false
         }
     }
     
     @IBAction func tryAgain() {
         request()
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        collapseDetailViewController = false
-    }
-}
-
-extension SearchViewController: UISplitViewControllerDelegate {
-    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
-        return collapseDetailViewController
     }
 }
 
@@ -67,9 +60,11 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell", for: indexPath) as! UserTableViewCell
         let user = data[indexPath.row]
-        cell.nameLabel.text = user.name
-        cell.screenNameLabel.text = "@\(user.screenName ?? "")"
-        cell.descriptionLabel.text = user.description
+        
+        let url = URL(string: user.profileImageUrl!)
+        let viewModel = UserTableViewCell.ViewModel(profileImageUrl: url!, name: user.name ?? "", screenName: "@\(user.screenName ?? "")", description: user.description ?? "")
+        
+        cell.viewModel = viewModel
         return cell
     }
     

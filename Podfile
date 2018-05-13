@@ -34,6 +34,7 @@ target 'Presentation' do
 
   # Pods for Presentation
   pod 'TwitterKit'
+  pod 'Kingfisher', '~> 4.0'
   
   target 'PresentationTests' do
     inherit! :search_paths

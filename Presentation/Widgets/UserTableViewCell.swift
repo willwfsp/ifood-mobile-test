@@ -7,10 +7,29 @@
 //
 
 import UIKit
+import Kingfisher
 
 class UserTableViewCell: UITableViewCell {
-    @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var screenNameLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var profileImageView: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var screenNameLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
+    
+    var viewModel: ViewModel! {
+        didSet {
+            profileImageView.kf.setImage(with: viewModel.profileImageUrl)
+            nameLabel.text = viewModel.name
+            screenNameLabel.text = viewModel.screenName
+            descriptionLabel.text = viewModel.description
+        }
+    }
+}
+
+extension UserTableViewCell {
+    struct ViewModel {
+        let profileImageUrl: URL
+        let name: String
+        let screenName: String
+        let description: String
+    }
 }

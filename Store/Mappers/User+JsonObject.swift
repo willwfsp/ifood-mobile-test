@@ -17,7 +17,7 @@ extension User: JsonConvertible {
         
         let name = json?["name"] as? String
         let screenName = json?["screen_name"] as? String
-        let profileImageUrl = json?["profile_image_url"] as? String
+        let profileImageUrl = json?["profile_image_url_https"] as? String
         let profileBackgroundImageUrl = json?["profile_background_image_url"] as? String
         let description = json?["description"] as? String
         
