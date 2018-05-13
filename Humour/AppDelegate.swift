@@ -17,7 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         TWTRTwitter.sharedInstance().start(withConsumerKey: "GIuEde4dv1J8D7IVL3DcIo33N", consumerSecret: "P3wIJ3ycjPInBS4llox8bken43YUccfDuuI5pHQBfbg1hyOKI7")
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.makeKeyAndVisible()
+        self.window = window
         
+        window.rootViewController = SceneProvider.shared.resolve(R.string.scene.search())
+    
         return true
     }
     

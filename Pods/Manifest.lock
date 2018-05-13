@@ -1,24 +1,49 @@
 PODS:
   - Kingfisher (4.7.0)
+  - R.swift (4.0.0):
+    - R.swift.Library (~> 4.0.0)
+  - R.swift.Library (4.0.0)
+  - Reusable (4.0.2):
+    - Reusable/Storyboard (= 4.0.2)
+    - Reusable/View (= 4.0.2)
+  - Reusable/Storyboard (4.0.2)
+  - Reusable/View (4.0.2)
+  - Swinject (2.4.0)
+  - SwinjectStoryboard (1.2.1):
+    - Swinject (~> 2.3)
   - TwitterCore (3.1.0)
   - TwitterKit (3.3.0):
     - TwitterCore (>= 3.1.0)
 
 DEPENDENCIES:
   - Kingfisher (~> 4.0)
-  - TwitterKit
+  - R.swift (~> 4.0)
+  - Reusable (~> 4.0)
+  - Swinject
+  - SwinjectStoryboard
+  - TwitterKit (~> 3.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Kingfisher
+    - R.swift
+    - R.swift.Library
+    - Reusable
+    - Swinject
+    - SwinjectStoryboard
     - TwitterCore
     - TwitterKit
 
 SPEC CHECKSUMS:
   Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
+  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
+  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
+  Reusable: 584a5629747c52e0f6a77841b400dc2643f6fa0f
+  Swinject: a1364b0f66c2736bb03c1c7cab54809e16df25da
+  SwinjectStoryboard: de60d1d30fbf442fe90fc5c31d9fff89cf3ef64f
   TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
   TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: cd763faacda256022e82fae9bedd49f9b9e7e23f
+PODFILE CHECKSUM: 3575ea27f4af73686789d4262ed632a1a97ec056
 
 COCOAPODS: 1.5.2

@@ -1,12 +1,18 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
+def common_pods
+    pod 'R.swift', '~> 4.0'
+    pod 'Swinject'
+end
+
 target 'Domain' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for Domain
-
+  common_pods
+  
   target 'DomainTests' do
     inherit! :search_paths
     # Pods for testing
@@ -19,7 +25,8 @@ target 'Humour' do
   use_frameworks!
 
   # Pods for Humour
-  pod 'TwitterKit'
+  pod 'TwitterKit', '~> 3.1'
+  common_pods
   
   target 'HumourTests' do
     inherit! :search_paths
@@ -31,10 +38,14 @@ end
 target 'Presentation' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
+  
 
   # Pods for Presentation
-  pod 'TwitterKit'
+  common_pods
+  pod 'TwitterKit', '~> 3.1'
   pod 'Kingfisher', '~> 4.0'
+  pod 'Reusable', '~> 4.0'
+  pod 'SwinjectStoryboard'
   
   target 'PresentationTests' do
     inherit! :search_paths
@@ -46,9 +57,10 @@ end
 target 'Store' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
+  common_pods
 
   # Pods for Store
-  pod 'TwitterKit'
+  pod 'TwitterKit', '~> 3.1'
   
   target 'StoreTests' do
     inherit! :search_paths
@@ -60,6 +72,7 @@ end
 target 'Utils' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
+  common_pods
 
   # Pods for Utils
 

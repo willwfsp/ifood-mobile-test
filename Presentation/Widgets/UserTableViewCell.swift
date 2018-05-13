@@ -8,8 +8,9 @@
 
 import UIKit
 import Kingfisher
+import Reusable
 
-class UserTableViewCell: UITableViewCell {
+class UserTableViewCell: UITableViewCell, Reusable {
     @IBOutlet private weak var profileImageView: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var screenNameLabel: UILabel!

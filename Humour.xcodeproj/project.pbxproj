@@ -14,7 +14,6 @@
 		7D05D8FF20A644F100CDF23C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D05D8FE20A644F100CDF23C /* AppDelegate.swift */; };
 		7D05D90620A644F400CDF23C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D05D90520A644F400CDF23C /* Assets.xcassets */; };
 		7D05D90920A644F400CDF23C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D05D90720A644F400CDF23C /* LaunchScreen.storyboard */; };
-		7D05D91420A644F400CDF23C /* HumourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D05D91320A644F400CDF23C /* HumourTests.swift */; };
 		7D05D93A20A6452F00CDF23C /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D05D93120A6452F00CDF23C /* Utils.framework */; };
 		7D05D94320A6452F00CDF23C /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D05D93320A6452F00CDF23C /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D05D94620A6452F00CDF23C /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D05D93120A6452F00CDF23C /* Utils.framework */; };
@@ -53,7 +52,6 @@
 		7DCC3E4720A6964100D9C268 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D05D90A20A644F400CDF23C /* Info.plist */; };
 		7DCC3E4820A6964A00D9C268 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D05D90A20A644F400CDF23C /* Info.plist */; };
 		7DCC3E5320A69CF000D9C268 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DCC3E5220A69CF000D9C268 /* Search.storyboard */; };
-		7DCC3E5420A69E2500D9C268 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DCC3E5220A69CF000D9C268 /* Search.storyboard */; };
 		7DCC3E5620A6A0AE00D9C268 /* SearchUsersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC3E5520A6A0AD00D9C268 /* SearchUsersUseCase.swift */; };
 		7DCC3E5920A6A13700D9C268 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC3E5820A6A13700D9C268 /* User.swift */; };
 		7DF5DEBC20A78E39003F29B0 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF5DEBB20A78E38003F29B0 /* SafariServices.framework */; };
@@ -67,6 +65,19 @@
 		7DF5DECD20A7F460003F29B0 /* SessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DECC20A7F460003F29B0 /* SessionRepository.swift */; };
 		7DF5DECF20A7F4BE003F29B0 /* SessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DECE20A7F4BE003F29B0 /* SessionRepository.swift */; };
 		7DF5DED220A7FE84003F29B0 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DED120A7FE84003F29B0 /* UserTableViewCell.swift */; };
+		7DF5DED620A86D10003F29B0 /* SearchModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DED520A86D10003F29B0 /* SearchModels.swift */; };
+		7DF5DED920A86D8A003F29B0 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DED820A86D8A003F29B0 /* Content.swift */; };
+		7DF5DF0A20A87C69003F29B0 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DF0920A87C69003F29B0 /* R.generated.swift */; };
+		7DF5DF0C20A87F8A003F29B0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB56D6120A755E500D240AF /* SearchViewController.swift */; };
+		7DF5DF0D20A87F92003F29B0 /* SearchModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DED520A86D10003F29B0 /* SearchModels.swift */; };
+		7DF5DF0E20A87FA0003F29B0 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DCC3E5220A69CF000D9C268 /* Search.storyboard */; };
+		7DF5DF0F20A87FB0003F29B0 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DED820A86D8A003F29B0 /* Content.swift */; };
+		7DF5DF1020A87FD1003F29B0 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DED120A7FE84003F29B0 /* UserTableViewCell.swift */; };
+		7DF5DF1320A884B6003F29B0 /* SceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DF1220A884B6003F29B0 /* SceneConfigurator.swift */; };
+		7DF5DF1420A887E8003F29B0 /* SceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DF1220A884B6003F29B0 /* SceneConfigurator.swift */; };
+		7DF5DF1620A8899E003F29B0 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DF1520A8899E003F29B0 /* SearchInteractor.swift */; };
+		7DF5DF1720A889E4003F29B0 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DF1520A8899E003F29B0 /* SearchInteractor.swift */; };
+		7DF5DF1C20A8926E003F29B0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DF1B20A8926E003F29B0 /* Constants.swift */; };
 		83BE91D969DC617C5BCDAF05 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C264ECCFDAE169F912415C /* Pods_Domain.framework */; };
 		99D59055BEF4EE81FC176C74 /* Pods_DomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D15B315F3DE69C20F476AFF /* Pods_DomainTests.framework */; };
 		A5575BFBEDEED2E40144F8ED /* Pods_PresentationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0A8365E6F9C6C83BB908C2 /* Pods_PresentationTests.framework */; };
@@ -221,7 +232,6 @@
 		7D05D90820A644F400CDF23C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D05D90A20A644F400CDF23C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D05D90F20A644F400CDF23C /* HumourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HumourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D05D91320A644F400CDF23C /* HumourTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumourTests.swift; sourceTree = "<group>"; };
 		7D05D93120A6452F00CDF23C /* Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D05D93320A6452F00CDF23C /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		7D05D93920A6452F00CDF23C /* UtilsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UtilsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -264,6 +274,12 @@
 		7DF5DECC20A7F460003F29B0 /* SessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRepository.swift; sourceTree = "<group>"; };
 		7DF5DECE20A7F4BE003F29B0 /* SessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRepository.swift; sourceTree = "<group>"; };
 		7DF5DED120A7FE84003F29B0 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		7DF5DED520A86D10003F29B0 /* SearchModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModels.swift; sourceTree = "<group>"; };
+		7DF5DED820A86D8A003F29B0 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		7DF5DF0920A87C69003F29B0 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = Presentation/R.generated.swift; sourceTree = SOURCE_ROOT; };
+		7DF5DF1220A884B6003F29B0 /* SceneConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneConfigurator.swift; sourceTree = "<group>"; };
+		7DF5DF1520A8899E003F29B0 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		7DF5DF1B20A8926E003F29B0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		82AAC6DC254DCD111720D662 /* Pods-DomainTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DomainTests/Pods-DomainTests.release.xcconfig"; sourceTree = "<group>"; };
 		84F38B88406E2A620D9A7E92 /* Pods-DomainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DomainTests/Pods-DomainTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8CD45F76A3052202D32204CF /* Pods-Store.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Store.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Store/Pods-Store.debug.xcconfig"; sourceTree = "<group>"; };
@@ -450,21 +466,13 @@
 		7D05D8FD20A644F100CDF23C /* Humour */ = {
 			isa = PBXGroup;
 			children = (
-				7D05D91220A644F400CDF23C /* Tests */,
 				7D05D8FE20A644F100CDF23C /* AppDelegate.swift */,
 				7D05D90520A644F400CDF23C /* Assets.xcassets */,
 				7D05D90720A644F400CDF23C /* LaunchScreen.storyboard */,
 				7D05D90A20A644F400CDF23C /* Info.plist */,
+				7DF5DF1B20A8926E003F29B0 /* Constants.swift */,
 			);
 			path = Humour;
-			sourceTree = "<group>";
-		};
-		7D05D91220A644F400CDF23C /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				7D05D91320A644F400CDF23C /* HumourTests.swift */,
-			);
-			path = Tests;
 			sourceTree = "<group>";
 		};
 		7D05D93220A6452F00CDF23C /* Utils */ = {
@@ -558,6 +566,7 @@
 		7DCC3DE320A68DE200D9C268 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				7DF5DED720A86D7D003F29B0 /* Utils */,
 				7DF5DED020A7FE66003F29B0 /* Widgets */,
 				7DCC3E5120A69CD500D9C268 /* Scenes */,
 				7DCC3DF020A68DE200D9C268 /* Tests */,
@@ -616,8 +625,8 @@
 		7DCC3E5120A69CD500D9C268 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				7DCC3E5220A69CF000D9C268 /* Search.storyboard */,
-				7DB56D6120A755E500D240AF /* SearchViewController.swift */,
+				7DF5DF1220A884B6003F29B0 /* SceneConfigurator.swift */,
+				7DF5DED320A86CE7003F29B0 /* Search */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -647,6 +656,26 @@
 				7DF5DED120A7FE84003F29B0 /* UserTableViewCell.swift */,
 			);
 			path = Widgets;
+			sourceTree = "<group>";
+		};
+		7DF5DED320A86CE7003F29B0 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				7DB56D6120A755E500D240AF /* SearchViewController.swift */,
+				7DCC3E5220A69CF000D9C268 /* Search.storyboard */,
+				7DF5DED520A86D10003F29B0 /* SearchModels.swift */,
+				7DF5DF1520A8899E003F29B0 /* SearchInteractor.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		7DF5DED720A86D7D003F29B0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7DF5DF0920A87C69003F29B0 /* R.generated.swift */,
+				7DF5DED820A86D8A003F29B0 /* Content.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -759,6 +788,7 @@
 				7D05D93520A6452F00CDF23C /* Sources */,
 				7D05D93620A6452F00CDF23C /* Frameworks */,
 				7D05D93720A6452F00CDF23C /* Resources */,
+				49067935FCBECBCB553A3EDB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -798,6 +828,7 @@
 				7D05D95820A645C500CDF23C /* Sources */,
 				7D05D95920A645C500CDF23C /* Frameworks */,
 				7D05D95A20A645C500CDF23C /* Resources */,
+				C7D99737091EEDA617CD44C4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -815,6 +846,7 @@
 			buildConfigurationList = 7DCC3DF920A68DE200D9C268 /* Build configuration list for PBXNativeTarget "Presentation" */;
 			buildPhases = (
 				FA79ADC5EB638C06023EC105 /* [CP] Check Pods Manifest.lock */,
+				7DF5DEDA20A8740A003F29B0 /* R Swift */,
 				7DCC3DDD20A68DE100D9C268 /* Sources */,
 				7DCC3DDE20A68DE100D9C268 /* Frameworks */,
 				7DCC3DDF20A68DE100D9C268 /* Headers */,
@@ -979,8 +1011,8 @@
 			files = (
 				7DCC3E4720A6964100D9C268 /* Info.plist in Resources */,
 				7D05D90920A644F400CDF23C /* LaunchScreen.storyboard in Resources */,
+				7DF5DF0E20A87FA0003F29B0 /* Search.storyboard in Resources */,
 				7D05D90620A644F400CDF23C /* Assets.xcassets in Resources */,
-				7DCC3E5420A69E2500D9C268 /* Search.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1077,15 +1109,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PresentationTests/Pods-PresentationTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1128,6 +1168,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PresentationTests/Pods-PresentationTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49067935FCBECBCB553A3EDB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-UtilsTests/Pods-UtilsTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UtilsTests/Pods-UtilsTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5F81EA41D26EF234A35E4C5E /* [CP] Check Pods Manifest.lock */ = {
@@ -1175,11 +1235,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-StoreTests/Pods-StoreTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 			);
@@ -1207,6 +1271,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Presentation/Pods-Presentation-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		7DF5DEDA20A8740A003F29B0 /* R Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "R Swift";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/Presentation\"";
 		};
 		86A998B18E4967F580904421 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1287,15 +1365,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Humour/Pods-Humour-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1338,6 +1424,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7D99737091EEDA617CD44C4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DomainTests/Pods-DomainTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DomainTests/Pods-DomainTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CB84E88D7FD980B72D23326D /* [CP] Check Pods Manifest.lock */ = {
@@ -1403,7 +1509,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DF5DF0C20A87F8A003F29B0 /* SearchViewController.swift in Sources */,
 				7D05D8FF20A644F100CDF23C /* AppDelegate.swift in Sources */,
+				7DF5DF0D20A87F92003F29B0 /* SearchModels.swift in Sources */,
+				7DF5DF0F20A87FB0003F29B0 /* Content.swift in Sources */,
+				7DF5DF1020A87FD1003F29B0 /* UserTableViewCell.swift in Sources */,
+				7DF5DF1420A887E8003F29B0 /* SceneConfigurator.swift in Sources */,
+				7DF5DF1720A889E4003F29B0 /* SearchInteractor.swift in Sources */,
+				7DF5DF1C20A8926E003F29B0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1412,7 +1525,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DB56D4820A71BB800D240AF /* XCTest.swift in Sources */,
-				7D05D91420A644F400CDF23C /* HumourTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1466,8 +1578,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DF5DF1320A884B6003F29B0 /* SceneConfigurator.swift in Sources */,
 				7DF5DED220A7FE84003F29B0 /* UserTableViewCell.swift in Sources */,
 				7DB56D6220A755E500D240AF /* SearchViewController.swift in Sources */,
+				7DF5DF0A20A87C69003F29B0 /* R.generated.swift in Sources */,
+				7DF5DED620A86D10003F29B0 /* SearchModels.swift in Sources */,
+				7DF5DED920A86D8A003F29B0 /* Content.swift in Sources */,
+				7DF5DF1620A8899E003F29B0 /* SearchInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1712,7 +1829,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Humour/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1738,7 +1855,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Humour/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
