@@ -79,13 +79,7 @@ public final class CompositeStorage: InstanceStorage {
     private let components: [InstanceStorage]
 
     public var instance: Any? {
-        get {
-            #if swift(>=4.1)
-                return components.compactMap { $0.instance } .first
-            #else
-                return components.flatMap { $0.instance } .first
-            #endif
-        }
+        get { return components.flatMap { $0.instance } .first }
         set { components.forEach { $0.instance = newValue } }
     }
 
@@ -102,11 +96,7 @@ public final class CompositeStorage: InstanceStorage {
     }
 
     public func instance(inGraph graph: GraphIdentifier) -> Any? {
-        #if swift(>=4.1)
-            return components.compactMap { $0.instance(inGraph: graph) } .first
-        #else
-            return components.flatMap { $0.instance(inGraph: graph) } .first
-        #endif
+        return components.flatMap { $0.instance(inGraph: graph) } .first
     }
 }
 

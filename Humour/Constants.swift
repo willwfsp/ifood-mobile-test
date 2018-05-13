@@ -16,4 +16,9 @@ extension R.string {
     struct scene {
         static func search() -> String { return "Search" }
     }
+    
+    struct twitter {
+        static func customerKey() -> String { return "GIuEde4dv1J8D7IVL3DcIo33N" }
+        static func customerSecret() -> String { return "P3wIJ3ycjPInBS4llox8bken43YUccfDuuI5pHQBfbg1hyOKI7" }
+    }
 }

@@ -8,7 +8,7 @@ PODS:
     - Reusable/View (= 4.0.2)
   - Reusable/Storyboard (4.0.2)
   - Reusable/View (4.0.2)
-  - Swinject (2.4.0)
+  - Swinject (2.3.0)
   - SwinjectAutoregistration (2.1.0):
     - Swinject (~> 2.1)
   - SwinjectStoryboard (1.2.1):
@@ -21,8 +21,8 @@ DEPENDENCIES:
   - Kingfisher (~> 4.0)
   - R.swift (~> 4.0)
   - Reusable (~> 4.0)
-  - Swinject
-  - SwinjectAutoregistration (= 2.1.0)
+  - Swinject (= 2.3.0)
+  - SwinjectAutoregistration
   - SwinjectStoryboard
   - TwitterKit (~> 3.1)
 
@@ -43,12 +43,12 @@ SPEC CHECKSUMS:
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
   Reusable: 584a5629747c52e0f6a77841b400dc2643f6fa0f
-  Swinject: a1364b0f66c2736bb03c1c7cab54809e16df25da
+  Swinject: 6e29897396bab81fe4aa40c5ca92ba996136334b
   SwinjectAutoregistration: 7d8ac2c23718c78286adf7590c6d0671b4ccc834
   SwinjectStoryboard: de60d1d30fbf442fe90fc5c31d9fff89cf3ef64f
   TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
   TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: 8b489f17f1ac9a56b486742a977f0813b3f8d0e2
+PODFILE CHECKSUM: 4ce18f9d492b2bbc38ef15605abf534e3b4c0180
 
 COCOAPODS: 1.5.2

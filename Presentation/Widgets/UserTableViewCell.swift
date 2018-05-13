@@ -10,7 +10,7 @@ import UIKit
 import Kingfisher
 import Reusable
 
-class UserTableViewCell: UITableViewCell, Reusable {
+public class UserTableViewCell: UITableViewCell, Reusable {
     @IBOutlet private weak var profileImageView: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var screenNameLabel: UILabel!
@@ -27,7 +27,7 @@ class UserTableViewCell: UITableViewCell, Reusable {
 }
 
 extension UserTableViewCell {
-    struct ViewModel {
+    public struct ViewModel {
         let profileImageUrl: URL
         let name: String
         let screenName: String

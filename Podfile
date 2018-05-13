@@ -3,8 +3,8 @@
 
 def common_pods
     pod 'R.swift', '~> 4.0'
-    pod 'Swinject', '2.4.0'
-    pod 'SwinjectAutoregistration', '2.1.0'
+    pod 'Swinject', '2.3.0'
+    pod 'SwinjectAutoregistration'
 end
 
 target 'Domain' do

@@ -8,14 +8,14 @@
 
 import Foundation
 
-enum Content<T> {
-    case success(T)
+public enum Content<T> {
+    case data(T)
     case error(UserError)
     case empty
     case loading
 }
 
-struct UserError: Error {
+public struct UserError: Error {
     let title: String
     let localizedDescription: String
     let style: ErrorStyle

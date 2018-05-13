@@ -12,11 +12,11 @@ import Reusable
 import Store
 import Domain
 
-protocol SearchDisplayLogic {
+public protocol SearchDisplayLogic {
     func displayFriends(viewModel: Search.GetFriends.ViewModel)
 }
 
-class SearchViewController: UIViewController {
+public class SearchViewController: UIViewController {
     var interactor: SearchBusinessLogic! = nil
     
     
@@ -24,17 +24,40 @@ class SearchViewController: UIViewController {
     @IBOutlet private weak var activityIndicatorView: UIActivityIndicatorView!
     
     var collapseDetailViewController = true
-    
-    var content: [UserTableViewCell.ViewModel] = [] {
+    var list: [UserTableViewCell.ViewModel] = [] {
         didSet {
             tableView.reloadData()
         }
     }
+    var content: Content<[UserTableViewCell.ViewModel]> = .loading {
+        didSet {
+            setActivityIndicator(visible: false)
+            
+            switch content {
+            case let .data(list):
+                self.list = list
+            case .error: break
+            case .loading:
+                setActivityIndicator(visible: true)
+            case .empty:
+                list = []
+            }
+        }
+    }
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         getFriends()
+    }
+    
+    func setActivityIndicator(visible: Bool) {
+        if visible {
+            activityIndicatorView.startAnimating()
+        } else {
+            activityIndicatorView.stopAnimating()
+        }
+        tableView.isHidden = visible
     }
     
     func setupTableView() {
@@ -43,6 +66,7 @@ class SearchViewController: UIViewController {
     }
     
     func getFriends() {
+        content = .loading
         let request = Search.GetFriends.Request()
         interactor.getLoggedUserFriends(request: request)
     }
@@ -52,14 +76,20 @@ class SearchViewController: UIViewController {
     }
 }
 
+extension SearchViewController: SearchDisplayLogic {
+    public func displayFriends(viewModel: Search.GetFriends.ViewModel) {
+        content = viewModel.content
+    }
+}
+
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UserTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-        
+        cell.viewModel = list[indexPath.row]
         return cell
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return list.count
     }
 }

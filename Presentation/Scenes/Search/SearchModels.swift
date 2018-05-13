@@ -10,16 +10,16 @@ import Foundation
 import Utils
 import Domain
 
-struct Search {
-    struct GetFriends {
-        struct Request { }
+public struct Search {
+    public struct GetFriends {
+        public struct Request { }
         
-        struct Response {
-            let result: Result<[User]>
+        public struct Response {
+            public let result: Result<[User]>
         }
         
-        struct ViewModel {
-            let content: Content<[UserTableViewCell.ViewModel]>
+        public struct ViewModel {
+            public let content: Content<[UserTableViewCell.ViewModel]>
         }
     }
 }

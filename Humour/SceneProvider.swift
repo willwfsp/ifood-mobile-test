@@ -7,16 +7,15 @@
 //
 
 import Foundation
+import Presentation
 import Swinject
 import SwinjectStoryboard
 
 class SceneProvider {
-    static let shared = SceneProvider()
-    private let container: Container
+    let container: Container
     
-    private init() {
-        container = Container()
-        configure()
+    init(container: Container) {
+        self.container = container
     }
 
     func resolve(_ scene: String) -> UIViewController! {
@@ -24,10 +23,10 @@ class SceneProvider {
     }
     
     private func create(storyboard: String) -> UIStoryboard! {
-        return SwinjectStoryboard.create(name: storyboard, bundle: nil, container: container)
+        return SwinjectStoryboard.create(name: storyboard, bundle: Bundle(identifier: "com.policiano.Presentation"), container: container)
     }
     
-    private func configure() {
+    func configure() {
         SearchViewController.register(container: container)
     }
 }

@@ -14,15 +14,15 @@ protocol SearchBusinessLogic {
 }
 
 struct SearchInteractor {
+    let presenter: SearchPresentationLogic
     let getLoggedUserFriendsUseCase: GetLoggedUserFriendsUseCase
-    
-    init(getLoggedUserFriendsUseCase: GetLoggedUserFriendsUseCase) {
-        self.getLoggedUserFriendsUseCase = getLoggedUserFriendsUseCase
-    }
 }
 
 extension SearchInteractor: SearchBusinessLogic {
     func getLoggedUserFriends(request: Search.GetFriends.Request) {
-        
+        getLoggedUserFriendsUseCase.execute() {
+            let response = Search.GetFriends.Response(result: $0)
+            self.presenter.presentFriends(response: response)
+        }
     }
 }
