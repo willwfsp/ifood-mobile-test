@@ -14,12 +14,14 @@ public struct User {
     public let screenName: String?
     public let profileImageUrl: String?
     public let profileBackgroundImageUrl: String?
+    public let description: String?
     
-    public init(id: String, name: String?, screenName: String?, profileImageUrl: String?, profileBackgroundImageUrl: String?) {
+    public init(id: String, name: String?, screenName: String?, profileImageUrl: String?, profileBackgroundImageUrl: String?, description: String?) {
         self.id = id
         self.name = name
         self.screenName = screenName
         self.profileImageUrl = profileImageUrl
         self.profileBackgroundImageUrl = profileBackgroundImageUrl
+        self.description = description
     }
 }

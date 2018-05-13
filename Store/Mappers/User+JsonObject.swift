@@ -19,8 +19,9 @@ extension User: JsonConvertible {
         let screenName = json?["screen_name"] as? String
         let profileImageUrl = json?["profile_image_url"] as? String
         let profileBackgroundImageUrl = json?["profile_background_image_url"] as? String
+        let description = json?["description"] as? String
         
-        self.init(id: id, name: name, screenName: screenName, profileImageUrl: profileImageUrl, profileBackgroundImageUrl: profileBackgroundImageUrl)
+        self.init(id: id, name: name, screenName: screenName, profileImageUrl: profileImageUrl, profileBackgroundImageUrl: profileBackgroundImageUrl, description: description)
     }
 }
 

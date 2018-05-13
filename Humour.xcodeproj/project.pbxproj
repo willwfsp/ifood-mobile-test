@@ -66,6 +66,7 @@
 		7DF5DECB20A7F282003F29B0 /* GetLoggedUserFriendsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DECA20A7F282003F29B0 /* GetLoggedUserFriendsUseCase.swift */; };
 		7DF5DECD20A7F460003F29B0 /* SessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DECC20A7F460003F29B0 /* SessionRepository.swift */; };
 		7DF5DECF20A7F4BE003F29B0 /* SessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DECE20A7F4BE003F29B0 /* SessionRepository.swift */; };
+		7DF5DED220A7FE84003F29B0 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DED120A7FE84003F29B0 /* UserTableViewCell.swift */; };
 		83BE91D969DC617C5BCDAF05 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C264ECCFDAE169F912415C /* Pods_Domain.framework */; };
 		99D59055BEF4EE81FC176C74 /* Pods_DomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D15B315F3DE69C20F476AFF /* Pods_DomainTests.framework */; };
 		A5575BFBEDEED2E40144F8ED /* Pods_PresentationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0A8365E6F9C6C83BB908C2 /* Pods_PresentationTests.framework */; };
@@ -262,6 +263,7 @@
 		7DF5DECA20A7F282003F29B0 /* GetLoggedUserFriendsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLoggedUserFriendsUseCase.swift; sourceTree = "<group>"; };
 		7DF5DECC20A7F460003F29B0 /* SessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRepository.swift; sourceTree = "<group>"; };
 		7DF5DECE20A7F4BE003F29B0 /* SessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRepository.swift; sourceTree = "<group>"; };
+		7DF5DED120A7FE84003F29B0 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		82AAC6DC254DCD111720D662 /* Pods-DomainTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DomainTests/Pods-DomainTests.release.xcconfig"; sourceTree = "<group>"; };
 		84F38B88406E2A620D9A7E92 /* Pods-DomainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DomainTests/Pods-DomainTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8CD45F76A3052202D32204CF /* Pods-Store.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Store.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Store/Pods-Store.debug.xcconfig"; sourceTree = "<group>"; };
@@ -556,6 +558,7 @@
 		7DCC3DE320A68DE200D9C268 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				7DF5DED020A7FE66003F29B0 /* Widgets */,
 				7DCC3E5120A69CD500D9C268 /* Scenes */,
 				7DCC3DF020A68DE200D9C268 /* Tests */,
 				7DCC3DE420A68DE200D9C268 /* Presentation.h */,
@@ -636,6 +639,14 @@
 				7DF5DEC820A7EE9B003F29B0 /* Friends.swift */,
 			);
 			path = Mappers;
+			sourceTree = "<group>";
+		};
+		7DF5DED020A7FE66003F29B0 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				7DF5DED120A7FE84003F29B0 /* UserTableViewCell.swift */,
+			);
+			path = Widgets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1470,6 +1481,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DF5DED220A7FE84003F29B0 /* UserTableViewCell.swift in Sources */,
 				7DB56D6220A755E500D240AF /* SearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
