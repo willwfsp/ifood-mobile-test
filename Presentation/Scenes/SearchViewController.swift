@@ -7,30 +7,20 @@
 //
 
 import UIKit
-import Domain
-import Utils
-import Store
+import TwitterKit
+import TwitterCore
 
 class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        request()
     }
     
     func request() {
-        let dataSource = RestDataSource<TwitterService>()
-        let repository = AuthRepository(restDataSource: dataSource, keyChainDataSource: KeychainDataSource.shared)
-        
-        
-        
-        repository.authenticate {
-            guard let accessToken = $0.data?.accessToken
-                else { return }
+        if TWTRTwitter.sharedInstance().sessionStore.hasLoggedInUsers() {
             
-            let userRepository = UserRepository(dataSource: dataSource, token: accessToken)
-            userRepository.searchUsers(term: "WPoliciano") { (result) in
+        } else {
+            TWTRTwitter.sharedInstance().logIn(with: self) { (session, error) in
                 
             }
         }

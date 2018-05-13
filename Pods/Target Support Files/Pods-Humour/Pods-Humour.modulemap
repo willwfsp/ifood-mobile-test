@@ -1,0 +1,6 @@
+framework module Pods_Humour {
+  umbrella header "Pods-Humour-umbrella.h"
+
+  export *
+  module * { export * }
+}
