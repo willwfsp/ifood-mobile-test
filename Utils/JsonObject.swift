@@ -11,6 +11,10 @@ import Foundation
 public typealias JsonObject = [String : Any?]
 public typealias JsonArray = [JsonObject]
 
+public protocol JsonConvertible {
+    init(with json: JsonObject?) throws
+}
+
 public enum JsonResult: Equatable {
     case object(JsonObject)
     case array(JsonArray)

@@ -8,7 +8,7 @@
 
 import UIKit
 import TwitterKit
-import TwitterCore
+import Store
 
 class SearchViewController: UIViewController {
 
@@ -17,12 +17,11 @@ class SearchViewController: UIViewController {
     }
     
     func request() {
-        if TWTRTwitter.sharedInstance().sessionStore.hasLoggedInUsers() {
-            
-        } else {
-            TWTRTwitter.sharedInstance().logIn(with: self) { (session, error) in
-                
-            }
+        let dataSource = TwitterDataSource(twitter: TWTRTwitter.sharedInstance())
+        let userRepository = UserRepository(dataSource: dataSource)
+        
+        userRepository.searchUsers(term: "WPoliciano") { (result) in
+
         }
     }
     
