@@ -7,11 +7,22 @@
 //
 
 import Foundation
+import Domain
 
 protocol SearchBusinessLogic {
-    
+    func getLoggedUserFriends(request: Search.GetFriends.Request)
 }
 
-struct SearchInteractor: SearchBusinessLogic {
+struct SearchInteractor {
+    let getLoggedUserFriendsUseCase: GetLoggedUserFriendsUseCase
     
+    init(getLoggedUserFriendsUseCase: GetLoggedUserFriendsUseCase) {
+        self.getLoggedUserFriendsUseCase = getLoggedUserFriendsUseCase
+    }
+}
+
+extension SearchInteractor: SearchBusinessLogic {
+    func getLoggedUserFriends(request: Search.GetFriends.Request) {
+        
+    }
 }

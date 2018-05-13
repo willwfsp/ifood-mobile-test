@@ -43,7 +43,8 @@ class SearchViewController: UIViewController {
     }
     
     func getFriends() {
-        
+        let request = Search.GetFriends.Request()
+        interactor.getLoggedUserFriends(request: request)
     }
     
     @IBAction func tryAgain() {

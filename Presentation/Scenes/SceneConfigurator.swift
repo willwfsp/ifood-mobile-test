@@ -31,19 +31,3 @@ class SceneProvider {
         SearchViewController.register(container: container)
     }
 }
-
-extension SceneProvider {
-    struct Scene { }
-}
-
-extension SearchViewController {
-    static func register(container: Container) {
-        container.storyboardInitCompleted(SearchViewController.self) { (resolver, controller) in
-            controller.interactor = SearchInteractor()
-        }
-    }
-}
-
-extension SceneProvider.Scene {
-    static let search = "Search"
-}

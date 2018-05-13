@@ -145,6 +145,7 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwinjectAutoregistration/SwinjectAutoregistration.framework"
   install_framework "${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework"
   install_framework "${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework"
@@ -154,6 +155,7 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwinjectAutoregistration/SwinjectAutoregistration.framework"
   install_framework "${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework"
   install_framework "${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework"
