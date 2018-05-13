@@ -18,7 +18,7 @@ public struct TwitterDataSource {
     }
     
     func request(_ target: TwitterService, completion: @escaping (Result<JsonResult>) -> ()) {
-        loginIfNeeded {
+        getApiClient {
             switch $0 {
             case let .success(client):
                 self.send(target: target, client: client) {
@@ -54,7 +54,7 @@ public struct TwitterDataSource {
         }
     }
     
-    private func loginIfNeeded(completion: @escaping (Result<TWTRAPIClient>) -> ()) {
+    public func getApiClient(completion: @escaping (Result<TWTRAPIClient>) -> ()) {
         if twitter.sessionStore.hasLoggedInUsers(),
             let session = twitter.sessionStore.session() {
             completion(.success(data: TWTRAPIClient(userID: session.userID)))

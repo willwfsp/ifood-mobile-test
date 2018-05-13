@@ -63,7 +63,9 @@
 		7DF5DEC520A7E60A003F29B0 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DEC420A7E60A003F29B0 /* Tweet.swift */; };
 		7DF5DEC720A7E9C4003F29B0 /* Tweet+JsonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DEC620A7E9C4003F29B0 /* Tweet+JsonObject.swift */; };
 		7DF5DEC920A7EE9B003F29B0 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DEC820A7EE9B003F29B0 /* Friends.swift */; };
-		7DF5DECB20A7F282003F29B0 /* GetUserFriendsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DECA20A7F282003F29B0 /* GetUserFriendsUseCase.swift */; };
+		7DF5DECB20A7F282003F29B0 /* GetLoggedUserFriendsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DECA20A7F282003F29B0 /* GetLoggedUserFriendsUseCase.swift */; };
+		7DF5DECD20A7F460003F29B0 /* SessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DECC20A7F460003F29B0 /* SessionRepository.swift */; };
+		7DF5DECF20A7F4BE003F29B0 /* SessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DECE20A7F4BE003F29B0 /* SessionRepository.swift */; };
 		83BE91D969DC617C5BCDAF05 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C264ECCFDAE169F912415C /* Pods_Domain.framework */; };
 		99D59055BEF4EE81FC176C74 /* Pods_DomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D15B315F3DE69C20F476AFF /* Pods_DomainTests.framework */; };
 		A5575BFBEDEED2E40144F8ED /* Pods_PresentationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0A8365E6F9C6C83BB908C2 /* Pods_PresentationTests.framework */; };
@@ -257,7 +259,9 @@
 		7DF5DEC420A7E60A003F29B0 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		7DF5DEC620A7E9C4003F29B0 /* Tweet+JsonObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tweet+JsonObject.swift"; sourceTree = "<group>"; };
 		7DF5DEC820A7EE9B003F29B0 /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
-		7DF5DECA20A7F282003F29B0 /* GetUserFriendsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserFriendsUseCase.swift; sourceTree = "<group>"; };
+		7DF5DECA20A7F282003F29B0 /* GetLoggedUserFriendsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLoggedUserFriendsUseCase.swift; sourceTree = "<group>"; };
+		7DF5DECC20A7F460003F29B0 /* SessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRepository.swift; sourceTree = "<group>"; };
+		7DF5DECE20A7F4BE003F29B0 /* SessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRepository.swift; sourceTree = "<group>"; };
 		82AAC6DC254DCD111720D662 /* Pods-DomainTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DomainTests/Pods-DomainTests.release.xcconfig"; sourceTree = "<group>"; };
 		84F38B88406E2A620D9A7E92 /* Pods-DomainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DomainTests/Pods-DomainTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8CD45F76A3052202D32204CF /* Pods-Store.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Store.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Store/Pods-Store.debug.xcconfig"; sourceTree = "<group>"; };
@@ -510,6 +514,7 @@
 			isa = PBXGroup;
 			children = (
 				7DB56D3D20A6A24F00D240AF /* UserRepository.swift */,
+				7DF5DECC20A7F460003F29B0 /* SessionRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -526,7 +531,7 @@
 			isa = PBXGroup;
 			children = (
 				7DCC3E5520A6A0AD00D9C268 /* SearchUsersUseCase.swift */,
-				7DF5DECA20A7F282003F29B0 /* GetUserFriendsUseCase.swift */,
+				7DF5DECA20A7F282003F29B0 /* GetLoggedUserFriendsUseCase.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -543,6 +548,7 @@
 			isa = PBXGroup;
 			children = (
 				7DB56D7C20A76E7100D240AF /* UserRepository.swift */,
+				7DF5DECE20A7F4BE003F29B0 /* SessionRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -1444,7 +1450,8 @@
 				7DCC3E5620A6A0AE00D9C268 /* SearchUsersUseCase.swift in Sources */,
 				7DF5DEC520A7E60A003F29B0 /* Tweet.swift in Sources */,
 				7DB56D3E20A6A24F00D240AF /* UserRepository.swift in Sources */,
-				7DF5DECB20A7F282003F29B0 /* GetUserFriendsUseCase.swift in Sources */,
+				7DF5DECB20A7F282003F29B0 /* GetLoggedUserFriendsUseCase.swift in Sources */,
+				7DF5DECD20A7F460003F29B0 /* SessionRepository.swift in Sources */,
 				7DCC3E5920A6A13700D9C268 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1480,6 +1487,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DF5DECF20A7F4BE003F29B0 /* SessionRepository.swift in Sources */,
 				7DF5DEBE20A7CBC2003F29B0 /* TwitterDataSource.swift in Sources */,
 				7DF5DEC920A7EE9B003F29B0 /* Friends.swift in Sources */,
 				7DF5DEC720A7E9C4003F29B0 /* Tweet+JsonObject.swift in Sources */,

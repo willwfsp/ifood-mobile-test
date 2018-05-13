@@ -9,6 +9,7 @@
 import UIKit
 import TwitterKit
 import Store
+import Domain
 
 class SearchViewController: UIViewController {
 
@@ -19,9 +20,11 @@ class SearchViewController: UIViewController {
     func request() {
         let dataSource = TwitterDataSource(twitter: TWTRTwitter.sharedInstance())
         let userRepository = UserRepository(dataSource: dataSource)
+        let sessionRepository = SessionRepository(dataSource: dataSource)
+        let useCase = GetLoggedUserFriendsUseCase(userRepository: userRepository, sessionRepository: sessionRepository)
         
-        userRepository.friends(userId: "292383655") { (result) in
-
+        useCase.execute { (result) in
+            
         }
     }
     
