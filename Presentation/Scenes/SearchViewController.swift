@@ -20,7 +20,7 @@ class SearchViewController: UIViewController {
         let dataSource = TwitterDataSource(twitter: TWTRTwitter.sharedInstance())
         let userRepository = UserRepository(dataSource: dataSource)
         
-        userRepository.searchUsers(term: "WPoliciano") { (result) in
+        userRepository.timeline(userId: "292383655") { (result) in
 
         }
     }

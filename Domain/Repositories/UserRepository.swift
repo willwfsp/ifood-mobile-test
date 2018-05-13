@@ -11,4 +11,5 @@ import Utils
 
 public protocol UserRepository {
     func searchUsers(term: String, completion: @escaping (Result<[User]>) -> ())
+    func timeline(userId: String, completion: @escaping (Result<[Tweet]>) -> ())
 }

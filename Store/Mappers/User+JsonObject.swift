@@ -13,7 +13,7 @@ import Domain
 extension User: JsonConvertible {
     public init(with json: JsonObject?) throws {
         guard let id = json?["id_str"] as? String
-            else { throw JsonError.missingField("id")}
+            else { throw JsonError.missingField("id_str") }
         
         let name = json?["name"] as? String
         let screenName = json?["screen_name"] as? String

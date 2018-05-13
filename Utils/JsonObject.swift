@@ -54,3 +54,20 @@ public enum JsonResult: Equatable {
         }
     }
 }
+
+public extension JsonResult {
+    public func map<T: JsonConvertible>() throws -> T {
+        guard let json = self.object else {
+            throw JsonError.malformed
+        }
+        return try T(with: json)
+    }
+    
+    public func mapList<T: JsonConvertible>() throws -> [T] {
+        guard let list = self.array else {
+            throw JsonError.malformed
+        }
+
+        return try list.compactMap { try T(with: $0) }
+    }
+}

@@ -24,15 +24,29 @@ public struct UserRepository: Domain.UserRepository {
             switch $0 {
             case let .success(jsonResult):
                 do {
-                    guard let list = jsonResult.array
-                        else { throw JsonError.malformed }
-                    
-                    let users = try self.compactMap(list: list)
+                    let users: [User] = try jsonResult.mapList()
                     completion(.success(data: users))
                 } catch {
                     completion(.failure(error: error))
                 }
                
+            case let .failure(error):
+                completion(.failure(error: error))
+            }
+        }
+    }
+    
+    public func timeline(userId: String, completion: @escaping (Result<[Tweet]>) -> ()) {
+        dataSource.request(.timeline(userId: userId)) {
+            switch $0 {
+            case let .success(jsonResult):
+                do {
+                    let users: [Tweet] = try jsonResult.mapList()
+                    completion(.success(data: users))
+                } catch {
+                    completion(.failure(error: error))
+                }
+                
             case let .failure(error):
                 completion(.failure(error: error))
             }
