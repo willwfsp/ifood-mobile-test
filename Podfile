@@ -59,6 +59,7 @@ target 'Store' do
 
   # Pods for Store
   pod 'TwitterKit', '~> 3.1'
+  pod 'Moya', '~> 11.0'
   
   target 'StoreTests' do
     inherit! :search_paths
