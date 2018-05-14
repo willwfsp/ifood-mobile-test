@@ -8,6 +8,7 @@
 
 import Foundation
 import Presentation
+import Utils
 import Swinject
 import SwinjectStoryboard
 
@@ -23,10 +24,11 @@ class SceneProvider {
     }
     
     private func create(storyboard: String) -> UIStoryboard! {
-        return SwinjectStoryboard.create(name: storyboard, bundle: Bundle(identifier: "com.policiano.Presentation"), container: container)
+        return SwinjectStoryboard.create(name: storyboard, bundle: Bundle(identifier: Constants.bundle.presentation), container: container)
     }
     
     func configure() {
         SearchViewController.register(container: container)
+        TweetsViewController.register(container: container)
     }
 }

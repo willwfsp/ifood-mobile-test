@@ -11,6 +11,7 @@ import Swinject
 import SwinjectAutoregistration
 import TwitterKit
 import Store
+import Utils
 
 class StoreProvider {
     let container: Container
@@ -20,7 +21,7 @@ class StoreProvider {
     }
     
     func configure() {
-        TWTRTwitter.sharedInstance().start(withConsumerKey: R.string.twitter.customerKey(), consumerSecret: R.string.twitter.customerSecret())
+        TWTRTwitter.sharedInstance().start(withConsumerKey: Constants.string.twitter.customerKey, consumerSecret: Constants.string.twitter.customerSecret)
         let twitter = TWTRTwitter.sharedInstance()
         
         container.register(TwitterDataSource.self) { _ in

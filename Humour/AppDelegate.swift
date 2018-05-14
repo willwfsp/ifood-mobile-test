@@ -9,6 +9,7 @@
 import UIKit
 import TwitterKit
 import Swinject
+import Utils
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DomainProvider(container: container).configure()
         StoreProvider(container: container).configure()
         
-        let searchViewController = sceneProvider.resolve(R.string.scene.search())
+        let searchViewController = sceneProvider.resolve(Constants.string.scene.search)
         let navigationController = UINavigationController(rootViewController: searchViewController!)
         navigationController.navigationBar.prefersLargeTitles = true
         window.rootViewController = navigationController

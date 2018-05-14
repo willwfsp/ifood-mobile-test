@@ -37,6 +37,17 @@
 		7DB56D6220A755E500D240AF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB56D6120A755E500D240AF /* SearchViewController.swift */; };
 		7DB56D7D20A76E7100D240AF /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB56D7C20A76E7100D240AF /* UserRepository.swift */; };
 		7DC59DB420A8B3E900FFD2B1 /* StoreProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC59DB320A8B3E900FFD2B1 /* StoreProvider.swift */; };
+		7DC59DCC20A8EE7D00FFD2B1 /* TweetsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC59DC620A8EE7B00FFD2B1 /* TweetsPresenter.swift */; };
+		7DC59DCD20A8EE7D00FFD2B1 /* TweetsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC59DC720A8EE7B00FFD2B1 /* TweetsInteractor.swift */; };
+		7DC59DCE20A8EE7D00FFD2B1 /* Tweets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DC59DC820A8EE7B00FFD2B1 /* Tweets.storyboard */; };
+		7DC59DCF20A8EE7D00FFD2B1 /* TweetsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC59DC920A8EE7C00FFD2B1 /* TweetsModels.swift */; };
+		7DC59DD020A8EE7D00FFD2B1 /* TweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC59DCA20A8EE7C00FFD2B1 /* TweetsViewController.swift */; };
+		7DC59DD120A8EE7D00FFD2B1 /* TweetsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC59DCB20A8EE7C00FFD2B1 /* TweetsConfigurator.swift */; };
+		7DC59DD920A8F25A00FFD2B1 /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC59DD820A8F25A00FFD2B1 /* TweetTableViewCell.swift */; };
+		7DC59DDC20A8F46100FFD2B1 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC59DDB20A8F46100FFD2B1 /* SearchRouter.swift */; };
+		7DC59DEC20A9041300FFD2B1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DF1B20A8926E003F29B0 /* Constants.swift */; };
+		7DC59DF020A90C4100FFD2B1 /* GetUserTimelineUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC59DEF20A90C4100FFD2B1 /* GetUserTimelineUseCase.swift */; };
+		7DC59DF220A90F1300FFD2B1 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC59DF120A90F1300FFD2B1 /* DependencyInjection.swift */; };
 		7DCC3DEB20A68DE200D9C268 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCC3DE220A68DE100D9C268 /* Presentation.framework */; };
 		7DCC3DF220A68DE200D9C268 /* PresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC3DF120A68DE200D9C268 /* PresentationTests.swift */; };
 		7DCC3DF420A68DE200D9C268 /* Presentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DCC3DE420A68DE200D9C268 /* Presentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -71,12 +82,9 @@
 		7DF5DED220A7FE84003F29B0 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DED120A7FE84003F29B0 /* UserTableViewCell.swift */; };
 		7DF5DED620A86D10003F29B0 /* SearchModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DED520A86D10003F29B0 /* SearchModels.swift */; };
 		7DF5DED920A86D8A003F29B0 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DED820A86D8A003F29B0 /* Content.swift */; };
-		7DF5DF0A20A87C69003F29B0 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DF0920A87C69003F29B0 /* R.generated.swift */; };
 		7DF5DF0F20A87FB0003F29B0 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DED820A86D8A003F29B0 /* Content.swift */; };
-		7DF5DF1020A87FD1003F29B0 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DED120A7FE84003F29B0 /* UserTableViewCell.swift */; };
 		7DF5DF1420A887E8003F29B0 /* SceneProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DF1220A884B6003F29B0 /* SceneProvider.swift */; };
 		7DF5DF1620A8899E003F29B0 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DF1520A8899E003F29B0 /* SearchInteractor.swift */; };
-		7DF5DF1C20A8926E003F29B0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DF1B20A8926E003F29B0 /* Constants.swift */; };
 		83BE91D969DC617C5BCDAF05 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C264ECCFDAE169F912415C /* Pods_Domain.framework */; };
 		99D59055BEF4EE81FC176C74 /* Pods_DomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D15B315F3DE69C20F476AFF /* Pods_DomainTests.framework */; };
 		A5575BFBEDEED2E40144F8ED /* Pods_PresentationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0A8365E6F9C6C83BB908C2 /* Pods_PresentationTests.framework */; };
@@ -249,6 +257,16 @@
 		7DB56D6120A755E500D240AF /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		7DB56D7C20A76E7100D240AF /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		7DC59DB320A8B3E900FFD2B1 /* StoreProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreProvider.swift; sourceTree = "<group>"; };
+		7DC59DC620A8EE7B00FFD2B1 /* TweetsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsPresenter.swift; sourceTree = "<group>"; };
+		7DC59DC720A8EE7B00FFD2B1 /* TweetsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsInteractor.swift; sourceTree = "<group>"; };
+		7DC59DC820A8EE7B00FFD2B1 /* Tweets.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tweets.storyboard; sourceTree = "<group>"; };
+		7DC59DC920A8EE7C00FFD2B1 /* TweetsModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsModels.swift; sourceTree = "<group>"; };
+		7DC59DCA20A8EE7C00FFD2B1 /* TweetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsViewController.swift; sourceTree = "<group>"; };
+		7DC59DCB20A8EE7C00FFD2B1 /* TweetsConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsConfigurator.swift; sourceTree = "<group>"; };
+		7DC59DD820A8F25A00FFD2B1 /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
+		7DC59DDB20A8F46100FFD2B1 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		7DC59DEF20A90C4100FFD2B1 /* GetUserTimelineUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserTimelineUseCase.swift; sourceTree = "<group>"; };
+		7DC59DF120A90F1300FFD2B1 /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
 		7DCC3DE220A68DE100D9C268 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DCC3DE420A68DE200D9C268 /* Presentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presentation.h; sourceTree = "<group>"; };
 		7DCC3DEA20A68DE200D9C268 /* PresentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -279,7 +297,6 @@
 		7DF5DED120A7FE84003F29B0 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		7DF5DED520A86D10003F29B0 /* SearchModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModels.swift; sourceTree = "<group>"; };
 		7DF5DED820A86D8A003F29B0 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
-		7DF5DF0920A87C69003F29B0 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = Presentation/R.generated.swift; sourceTree = SOURCE_ROOT; };
 		7DF5DF1220A884B6003F29B0 /* SceneProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneProvider.swift; sourceTree = "<group>"; };
 		7DF5DF1520A8899E003F29B0 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
 		7DF5DF1B20A8926E003F29B0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -473,7 +490,6 @@
 				7D05D90520A644F400CDF23C /* Assets.xcassets */,
 				7D05D90720A644F400CDF23C /* LaunchScreen.storyboard */,
 				7D05D90A20A644F400CDF23C /* Info.plist */,
-				7DF5DF1B20A8926E003F29B0 /* Constants.swift */,
 				7DF5DF1220A884B6003F29B0 /* SceneProvider.swift */,
 				7D52319820A8B00300A49C2F /* DomainProvider.swift */,
 				7DC59DB320A8B3E900FFD2B1 /* StoreProvider.swift */,
@@ -484,6 +500,7 @@
 		7D05D93220A6452F00CDF23C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				7DF5DF1B20A8926E003F29B0 /* Constants.swift */,
 				7DCC3E3720A6953900D9C268 /* Errors.swift */,
 				7DCC3E3420A6953600D9C268 /* FileProvider.swift */,
 				7DCC3E3620A6953800D9C268 /* JsonObject.swift */,
@@ -548,6 +565,7 @@
 			children = (
 				7DCC3E5520A6A0AD00D9C268 /* SearchUsersUseCase.swift */,
 				7DF5DECA20A7F282003F29B0 /* GetLoggedUserFriendsUseCase.swift */,
+				7DC59DEF20A90C4100FFD2B1 /* GetUserTimelineUseCase.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -567,6 +585,19 @@
 				7DF5DECE20A7F4BE003F29B0 /* SessionRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		7DC59DC520A8EE4900FFD2B1 /* Tweets */ = {
+			isa = PBXGroup;
+			children = (
+				7DC59DCA20A8EE7C00FFD2B1 /* TweetsViewController.swift */,
+				7DC59DC720A8EE7B00FFD2B1 /* TweetsInteractor.swift */,
+				7DC59DC620A8EE7B00FFD2B1 /* TweetsPresenter.swift */,
+				7DC59DC920A8EE7C00FFD2B1 /* TweetsModels.swift */,
+				7DC59DCB20A8EE7C00FFD2B1 /* TweetsConfigurator.swift */,
+				7DC59DC820A8EE7B00FFD2B1 /* Tweets.storyboard */,
+			);
+			path = Tweets;
 			sourceTree = "<group>";
 		};
 		7DCC3DE320A68DE200D9C268 /* Presentation */ = {
@@ -631,6 +662,7 @@
 		7DCC3E5120A69CD500D9C268 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				7DC59DC520A8EE4900FFD2B1 /* Tweets */,
 				7DF5DED320A86CE7003F29B0 /* Search */,
 			);
 			path = Scenes;
@@ -659,6 +691,7 @@
 			isa = PBXGroup;
 			children = (
 				7DF5DED120A7FE84003F29B0 /* UserTableViewCell.swift */,
+				7DC59DD820A8F25A00FFD2B1 /* TweetTableViewCell.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -671,6 +704,7 @@
 				7D52319320A8A2B100A49C2F /* SearchPresenter.swift */,
 				7DF5DED520A86D10003F29B0 /* SearchModels.swift */,
 				7D52319120A8978A00A49C2F /* SearchConfigurator.swift */,
+				7DC59DDB20A8F46100FFD2B1 /* SearchRouter.swift */,
 				7DCC3E5220A69CF000D9C268 /* Search.storyboard */,
 			);
 			path = Search;
@@ -679,8 +713,8 @@
 		7DF5DED720A86D7D003F29B0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				7DF5DF0920A87C69003F29B0 /* R.generated.swift */,
 				7DF5DED820A86D8A003F29B0 /* Content.swift */,
+				7DC59DF120A90F1300FFD2B1 /* DependencyInjection.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -853,7 +887,6 @@
 			buildConfigurationList = 7DCC3DF920A68DE200D9C268 /* Build configuration list for PBXNativeTarget "Presentation" */;
 			buildPhases = (
 				FA79ADC5EB638C06023EC105 /* [CP] Check Pods Manifest.lock */,
-				7DF5DEDA20A8740A003F29B0 /* R Swift */,
 				7DCC3DDD20A68DE100D9C268 /* Sources */,
 				7DCC3DDE20A68DE100D9C268 /* Frameworks */,
 				7DCC3DDF20A68DE100D9C268 /* Headers */,
@@ -1062,6 +1095,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DC59DCE20A8EE7D00FFD2B1 /* Tweets.storyboard in Resources */,
 				7DCC3E5320A69CF000D9C268 /* Search.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1283,20 +1317,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Presentation/Pods-Presentation-resources.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		7DF5DEDA20A8740A003F29B0 /* R Swift */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "R Swift";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/Presentation\"";
 		};
 		86A998B18E4967F580904421 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1528,10 +1548,8 @@
 				7D52319920A8B00300A49C2F /* DomainProvider.swift in Sources */,
 				7D05D8FF20A644F100CDF23C /* AppDelegate.swift in Sources */,
 				7DF5DF0F20A87FB0003F29B0 /* Content.swift in Sources */,
-				7DF5DF1020A87FD1003F29B0 /* UserTableViewCell.swift in Sources */,
 				7DC59DB420A8B3E900FFD2B1 /* StoreProvider.swift in Sources */,
 				7DF5DF1420A887E8003F29B0 /* SceneProvider.swift in Sources */,
-				7DF5DF1C20A8926E003F29B0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1552,6 +1570,7 @@
 				7DCC3E3920A6953B00D9C268 /* FileProvider.swift in Sources */,
 				7DCC3E3B20A6953B00D9C268 /* JsonObject.swift in Sources */,
 				7DB56D5B20A73CC700D240AF /* Nonce.swift in Sources */,
+				7DC59DEC20A9041300FFD2B1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1572,6 +1591,7 @@
 				7DB56D4120A719C900D240AF /* Errors.swift in Sources */,
 				7DCC3E5620A6A0AE00D9C268 /* SearchUsersUseCase.swift in Sources */,
 				7DF5DEC520A7E60A003F29B0 /* Tweet.swift in Sources */,
+				7DC59DF020A90C4100FFD2B1 /* GetUserTimelineUseCase.swift in Sources */,
 				7DB56D3E20A6A24F00D240AF /* UserRepository.swift in Sources */,
 				7DF5DECB20A7F282003F29B0 /* GetLoggedUserFriendsUseCase.swift in Sources */,
 				7DF5DECD20A7F460003F29B0 /* SessionRepository.swift in Sources */,
@@ -1594,13 +1614,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DF5DED220A7FE84003F29B0 /* UserTableViewCell.swift in Sources */,
+				7DC59DD120A8EE7D00FFD2B1 /* TweetsConfigurator.swift in Sources */,
 				7D52319420A8A2B100A49C2F /* SearchPresenter.swift in Sources */,
+				7DC59DCC20A8EE7D00FFD2B1 /* TweetsPresenter.swift in Sources */,
 				7DB56D6220A755E500D240AF /* SearchViewController.swift in Sources */,
-				7DF5DF0A20A87C69003F29B0 /* R.generated.swift in Sources */,
+				7DC59DCD20A8EE7D00FFD2B1 /* TweetsInteractor.swift in Sources */,
+				7DC59DDC20A8F46100FFD2B1 /* SearchRouter.swift in Sources */,
+				7DC59DD020A8EE7D00FFD2B1 /* TweetsViewController.swift in Sources */,
+				7DC59DF220A90F1300FFD2B1 /* DependencyInjection.swift in Sources */,
 				7D52319720A8ACC300A49C2F /* SearchConfigurator.swift in Sources */,
+				7DC59DCF20A8EE7D00FFD2B1 /* TweetsModels.swift in Sources */,
 				7DF5DED620A86D10003F29B0 /* SearchModels.swift in Sources */,
 				7DF5DED920A86D8A003F29B0 /* Content.swift in Sources */,
 				7DF5DF1620A8899E003F29B0 /* SearchInteractor.swift in Sources */,
+				7DC59DD920A8F25A00FFD2B1 /* TweetTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

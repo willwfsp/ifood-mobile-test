@@ -1,5 +1,5 @@
 //
-//  SearchViewController.swift
+//  TweetsViewController.swift
 //  Presentation
 //
 //  Created by Willian on 12/05/2018.
@@ -12,26 +12,24 @@ import Reusable
 import Store
 import Domain
 
-public protocol SearchDisplayLogic {
-    func displayFriends(viewModel: Search.GetFriends.ViewModel)
+public protocol TweetsDisplayLogic {
+    func displayTweets(viewModel: Tweets.GetTweets.ViewModel)
 }
 
-public class SearchViewController: UIViewController {
-    var interactor: SearchBusinessLogic! = nil
-    var router: SearchRouter! = nil
+public class TweetsViewController: UIViewController {
+    var interactor: TweetsBusinessLogic! = nil
+    
     
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var activityIndicatorView: UIActivityIndicatorView!
     
-    var selectedIndex: Int? = nil
-    
-    var list: [UserTableViewCell.ViewModel] = [] {
+    var collapseDetailViewController = true
+    var list: [TweetTableViewCell.ViewModel] = [] {
         didSet {
             tableView.reloadData()
         }
     }
-    
-    var content: Content<[UserTableViewCell.ViewModel]> = .loading {
+    var content: Content<[TweetTableViewCell.ViewModel]> = .loading {
         didSet {
             setActivityIndicator(visible: false)
             
@@ -50,7 +48,7 @@ public class SearchViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        getFriends()
+        getTweets()
     }
     
     func setActivityIndicator(visible: Bool) {
@@ -67,36 +65,31 @@ public class SearchViewController: UIViewController {
         tableView.estimatedRowHeight = 84
     }
     
-    func getFriends() {
+    func getTweets() {
         content = .loading
-        let request = Search.GetFriends.Request()
-        interactor.getLoggedUserFriends(request: request)
+        let request = Tweets.GetTweets.Request()
+        interactor.getTweets(request: request)
     }
     
     @IBAction func tryAgain() {
-        getFriends()
+        getTweets()
     }
 }
 
-extension SearchViewController: SearchDisplayLogic {
-    public func displayFriends(viewModel: Search.GetFriends.ViewModel) {
+extension TweetsViewController: TweetsDisplayLogic {
+    public func displayTweets(viewModel: Tweets.GetTweets.ViewModel) {
         content = viewModel.content
     }
 }
 
-extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
+extension TweetsViewController: UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UserTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.viewModel = list[indexPath.row]
+        let cell: TweetTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+        //cell.viewModel = list[indexPath.row]
         return cell
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list.count
-    }
-    
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedIndex = indexPath.row
-        router.navigateToUserTweets()
+        return 4//list.count
     }
 }
