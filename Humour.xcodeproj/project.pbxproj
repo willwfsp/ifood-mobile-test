@@ -34,7 +34,6 @@
 		7DB56D4720A71BB600D240AF /* XCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB56D4320A71BA000D240AF /* XCTest.swift */; };
 		7DB56D4820A71BB800D240AF /* XCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB56D4320A71BA000D240AF /* XCTest.swift */; };
 		7DB56D4B20A71F8B00D240AF /* UserRepositorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB56D4A20A71F8B00D240AF /* UserRepositorySpy.swift */; };
-		7DB56D5B20A73CC700D240AF /* Nonce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB56D5A20A73CC700D240AF /* Nonce.swift */; };
 		7DB56D6220A755E500D240AF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB56D6120A755E500D240AF /* SearchViewController.swift */; };
 		7DB56D7D20A76E7100D240AF /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB56D7C20A76E7100D240AF /* UserRepository.swift */; };
 		7DC59DB420A8B3E900FFD2B1 /* StoreProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC59DB320A8B3E900FFD2B1 /* StoreProvider.swift */; };
@@ -70,6 +69,7 @@
 		7DCC3E5320A69CF000D9C268 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DCC3E5220A69CF000D9C268 /* Search.storyboard */; };
 		7DCC3E5620A6A0AE00D9C268 /* SearchUsersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC3E5520A6A0AD00D9C268 /* SearchUsersUseCase.swift */; };
 		7DCC3E5920A6A13700D9C268 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC3E5820A6A13700D9C268 /* User.swift */; };
+		7DCD435D20A9AC4800B179DA /* GoogleSentimentApiEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCD435C20A9AC4800B179DA /* GoogleSentimentApiEntity.swift */; };
 		7DF5DEBC20A78E39003F29B0 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF5DEBB20A78E38003F29B0 /* SafariServices.framework */; };
 		7DF5DEBE20A7CBC2003F29B0 /* TwitterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DEBD20A7CBC2003F29B0 /* TwitterDataSource.swift */; };
 		7DF5DEC020A7D0A5003F29B0 /* TwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DEBF20A7D0A5003F29B0 /* TwitterService.swift */; };
@@ -255,7 +255,6 @@
 		7DB56D4020A719C900D240AF /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		7DB56D4320A71BA000D240AF /* XCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTest.swift; sourceTree = "<group>"; };
 		7DB56D4A20A71F8B00D240AF /* UserRepositorySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositorySpy.swift; sourceTree = "<group>"; };
-		7DB56D5A20A73CC700D240AF /* Nonce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nonce.swift; sourceTree = "<group>"; };
 		7DB56D6120A755E500D240AF /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		7DB56D7C20A76E7100D240AF /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		7DC59DB320A8B3E900FFD2B1 /* StoreProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreProvider.swift; sourceTree = "<group>"; };
@@ -286,6 +285,7 @@
 		7DCC3E5220A69CF000D9C268 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		7DCC3E5520A6A0AD00D9C268 /* SearchUsersUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsersUseCase.swift; sourceTree = "<group>"; };
 		7DCC3E5820A6A13700D9C268 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7DCD435C20A9AC4800B179DA /* GoogleSentimentApiEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSentimentApiEntity.swift; sourceTree = "<group>"; };
 		7DF5DEBB20A78E38003F29B0 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		7DF5DEBD20A7CBC2003F29B0 /* TwitterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterDataSource.swift; sourceTree = "<group>"; };
 		7DF5DEBF20A7D0A5003F29B0 /* TwitterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterService.swift; sourceTree = "<group>"; };
@@ -510,7 +510,6 @@
 				7DB56D4320A71BA000D240AF /* XCTest.swift */,
 				7D05D93F20A6452F00CDF23C /* Tests */,
 				7D05D93320A6452F00CDF23C /* Utils.h */,
-				7DB56D5A20A73CC700D240AF /* Nonce.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -625,6 +624,7 @@
 		7DCC3E0520A68DEC00D9C268 /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				7DCD435B20A9AC3800B179DA /* Entities */,
 				7DF5DEC120A7DA53003F29B0 /* Mappers */,
 				7DB56D5C20A7544700D240AF /* Repositories */,
 				7DCC3E4420A695C600D9C268 /* DataSource */,
@@ -677,6 +677,14 @@
 				7DF5DEC420A7E60A003F29B0 /* Tweet.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		7DCD435B20A9AC3800B179DA /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				7DCD435C20A9AC4800B179DA /* GoogleSentimentApiEntity.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		7DF5DEC120A7DA53003F29B0 /* Mappers */ = {
@@ -1516,7 +1524,6 @@
 				7DCC3E3D20A6953B00D9C268 /* Result.swift in Sources */,
 				7DCC3E3920A6953B00D9C268 /* FileProvider.swift in Sources */,
 				7DCC3E3B20A6953B00D9C268 /* JsonObject.swift in Sources */,
-				7DB56D5B20A73CC700D240AF /* Nonce.swift in Sources */,
 				7DC59DEC20A9041300FFD2B1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1596,6 +1603,7 @@
 				7DF5DEBE20A7CBC2003F29B0 /* TwitterDataSource.swift in Sources */,
 				7DF5DEC920A7EE9B003F29B0 /* Friends.swift in Sources */,
 				7DF5DEC720A7E9C4003F29B0 /* Tweet+JsonObject.swift in Sources */,
+				7DCD435D20A9AC4800B179DA /* GoogleSentimentApiEntity.swift in Sources */,
 				7DB56D7D20A76E7100D240AF /* UserRepository.swift in Sources */,
 				7DF5DEC020A7D0A5003F29B0 /* TwitterService.swift in Sources */,
 				7DF5DEC320A7DA73003F29B0 /* User+JsonObject.swift in Sources */,
