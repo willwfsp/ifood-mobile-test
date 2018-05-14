@@ -18,19 +18,25 @@ protocol TweetsBusinessLogic {
 
 class TweetsInteractor {
     let presenter: TweetsPresentationLogic
-    let getLoggedUserFriendsUseCase: GetLoggedUserFriendsUseCase
+    let getUserTimelineUseCase: GetUserTimelineUseCase
     
     var selectedUser: User?
     
-    init(presenter: TweetsPresentationLogic, getLoggedUserFriendsUseCase: GetLoggedUserFriendsUseCase) {
+    init(presenter: TweetsPresentationLogic, getUserTimelineUseCase: GetUserTimelineUseCase) {
         self.presenter = presenter
-        self.getLoggedUserFriendsUseCase = getLoggedUserFriendsUseCase
+        self.getUserTimelineUseCase = getUserTimelineUseCase
     }
 }
 
 extension TweetsInteractor: TweetsBusinessLogic {
     func getTweets(request: Tweets.GetTweets.Request) {
-
+        guard let userId = selectedUser?.id else { return }
+        let request = GetUserTimelineUseCase.Request(userId: userId)
+        
+        getUserTimelineUseCase.execute(request: request) { [weak self] in
+            let response = Tweets.GetTweets.Response(result: $0)
+            self?.presenter.presentTweets(response: response)
+        }
     }
     
     func getUserScreenName(request: Tweets.GetUserScreenName.Request) {

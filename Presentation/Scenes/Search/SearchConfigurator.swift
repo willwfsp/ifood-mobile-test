@@ -10,7 +10,6 @@ import Foundation
 import Domain
 import Swinject
 import SwinjectStoryboard
-import SwinjectAutoregistration
 
 public extension SearchViewController {
     public static func register(container: Container) {

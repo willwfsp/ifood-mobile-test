@@ -96,11 +96,11 @@ extension TweetsViewController: TweetsDisplayLogic {
 extension TweetsViewController: UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: TweetTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-        //cell.viewModel = list[indexPath.row]
+        cell.viewModel = list[indexPath.row]
         return cell
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4//list.count
+        return list.count
     }
 }

@@ -36,7 +36,7 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GjT-jm-Wcx">
                                                     <rect key="frame" x="0.0" y="0.0" width="40" height="199.5"/>
-                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.80000000000000004" alpha="0.62381712147887325" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="jgj-6l-lp6"/>
                                                     </constraints>

@@ -18,7 +18,7 @@ public class TweetTableViewCell: UITableViewCell, Reusable {
     var viewModel: ViewModel! {
         didSet {
             tweetLabel.text = viewModel.text
-            dateLabel.text = viewModel.text
+            dateLabel.text = viewModel.date
             emojiLabel.text = viewModel.emoji
             happinessView.backgroundColor = viewModel.happinesColor
         }

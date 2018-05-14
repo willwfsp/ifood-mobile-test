@@ -26,6 +26,7 @@
 		7D52319420A8A2B100A49C2F /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D52319320A8A2B100A49C2F /* SearchPresenter.swift */; };
 		7D52319720A8ACC300A49C2F /* SearchConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D52319120A8978A00A49C2F /* SearchConfigurator.swift */; };
 		7D52319920A8B00300A49C2F /* DomainProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D52319820A8B00300A49C2F /* DomainProvider.swift */; };
+		7D89567820A91F550044D59D /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D89567720A91F550044D59D /* UIColor.swift */; };
 		7DB56D3E20A6A24F00D240AF /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB56D3D20A6A24F00D240AF /* UserRepository.swift */; };
 		7DB56D4120A719C900D240AF /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB56D4020A719C900D240AF /* Errors.swift */; };
 		7DB56D4520A71BB300D240AF /* XCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB56D4320A71BA000D240AF /* XCTest.swift */; };
@@ -249,6 +250,7 @@
 		7D52319120A8978A00A49C2F /* SearchConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchConfigurator.swift; sourceTree = "<group>"; };
 		7D52319320A8A2B100A49C2F /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		7D52319820A8B00300A49C2F /* DomainProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainProvider.swift; sourceTree = "<group>"; };
+		7D89567720A91F550044D59D /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		7DB56D3D20A6A24F00D240AF /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		7DB56D4020A719C900D240AF /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		7DB56D4320A71BA000D240AF /* XCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTest.swift; sourceTree = "<group>"; };
@@ -715,6 +717,7 @@
 			children = (
 				7DF5DED820A86D8A003F29B0 /* Content.swift */,
 				7DC59DF120A90F1300FFD2B1 /* DependencyInjection.swift */,
+				7D89567720A91F550044D59D /* UIColor.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -829,7 +832,6 @@
 				7D05D93520A6452F00CDF23C /* Sources */,
 				7D05D93620A6452F00CDF23C /* Frameworks */,
 				7D05D93720A6452F00CDF23C /* Resources */,
-				49067935FCBECBCB553A3EDB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -869,7 +871,6 @@
 				7D05D95820A645C500CDF23C /* Sources */,
 				7D05D95920A645C500CDF23C /* Frameworks */,
 				7D05D95A20A645C500CDF23C /* Resources */,
-				C7D99737091EEDA617CD44C4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1149,7 +1150,6 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PresentationTests/Pods-PresentationTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/SwinjectAutoregistration/SwinjectAutoregistration.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
@@ -1160,7 +1160,6 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectAutoregistration.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
@@ -1212,28 +1211,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PresentationTests/Pods-PresentationTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		49067935FCBECBCB553A3EDB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-UtilsTests/Pods-UtilsTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
-				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
-				"${BUILT_PRODUCTS_DIR}/SwinjectAutoregistration/SwinjectAutoregistration.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectAutoregistration.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UtilsTests/Pods-UtilsTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5F81EA41D26EF234A35E4C5E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1279,17 +1256,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-StoreTests/Pods-StoreTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
-				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
-				"${BUILT_PRODUCTS_DIR}/SwinjectAutoregistration/SwinjectAutoregistration.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectAutoregistration.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 			);
@@ -1397,7 +1368,6 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Humour/Pods-Humour-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/SwinjectAutoregistration/SwinjectAutoregistration.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
@@ -1408,7 +1378,6 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectAutoregistration.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
@@ -1458,28 +1427,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C7D99737091EEDA617CD44C4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DomainTests/Pods-DomainTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
-				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
-				"${BUILT_PRODUCTS_DIR}/SwinjectAutoregistration/SwinjectAutoregistration.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectAutoregistration.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DomainTests/Pods-DomainTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CB84E88D7FD980B72D23326D /* [CP] Check Pods Manifest.lock */ = {
@@ -1618,6 +1565,7 @@
 				7D52319420A8A2B100A49C2F /* SearchPresenter.swift in Sources */,
 				7DC59DCC20A8EE7D00FFD2B1 /* TweetsPresenter.swift in Sources */,
 				7DB56D6220A755E500D240AF /* SearchViewController.swift in Sources */,
+				7D89567820A91F550044D59D /* UIColor.swift in Sources */,
 				7DC59DCD20A8EE7D00FFD2B1 /* TweetsInteractor.swift in Sources */,
 				7DC59DDC20A8F46100FFD2B1 /* SearchRouter.swift in Sources */,
 				7DC59DD020A8EE7D00FFD2B1 /* TweetsViewController.swift in Sources */,

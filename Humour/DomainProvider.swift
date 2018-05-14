@@ -29,5 +29,11 @@ class DomainProvider {
                                         sessionRepository: $0.resolve(Domain.SessionRepository.self)!)
             
         }
+        
+        container.register(GetUserTimelineUseCase.self) {
+            GetUserTimelineUseCase(userRepository: $0.resolve(Domain.UserRepository.self)!,
+                                   sessionRepository: $0.resolve(Domain.SessionRepository.self)!)
+            
+        }
     }
 }

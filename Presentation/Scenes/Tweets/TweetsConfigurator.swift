@@ -10,14 +10,13 @@ import Foundation
 import Domain
 import Swinject
 import SwinjectStoryboard
-import SwinjectAutoregistration
 
 public extension TweetsViewController {
     public static func register(container: Container) {
         container.register(TweetsBusinessLogic.self) { (r, view: TweetsDisplayLogic) in
             let presenter = r.resolve(TweetsPresentationLogic.self, argument: view)!
-            let useCase = r.resolve(GetLoggedUserFriendsUseCase.self)!
-            let interactor = TweetsInteractor(presenter: presenter, getLoggedUserFriendsUseCase: useCase)
+            let useCase = r.resolve(GetUserTimelineUseCase.self)!
+            let interactor = TweetsInteractor(presenter: presenter, getUserTimelineUseCase: useCase)
             return interactor
         }
         

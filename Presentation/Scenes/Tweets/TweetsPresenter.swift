@@ -22,7 +22,13 @@ extension TweetsPresenter: TweetsPresentationLogic {
         switch response.result {
         case let .success(tweets):
             typealias ViewModel = TweetTableViewCell.ViewModel
-
+            
+            let data: [ViewModel] = tweets.map {
+                ViewModel(text: $0.text ?? "", date: $0.createdDate ?? "", emoji: "😐", happinesColor: .neutralGrey)
+            }
+            
+            let viewModel = Tweets.GetTweets.ViewModel(content: .data(data))
+            view.displayTweets(viewModel: viewModel)
         default:
             break
         }

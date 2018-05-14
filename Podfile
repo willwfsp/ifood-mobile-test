@@ -2,7 +2,6 @@
 # platform :ios, '9.0'
 
 def common_pods
-    pod 'R.swift', '~> 4.0'
     pod 'Swinject', '2.3.0'
     pod 'SwinjectAutoregistration'
 end
@@ -12,7 +11,6 @@ target 'Domain' do
   use_frameworks!
 
   # Pods for Domain
-  common_pods
   
   target 'DomainTests' do
     inherit! :search_paths
@@ -58,7 +56,6 @@ end
 target 'Store' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  common_pods
 
   # Pods for Store
   pod 'TwitterKit', '~> 3.1'
@@ -73,7 +70,6 @@ end
 target 'Utils' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  common_pods
 
   # Pods for Utils
 
