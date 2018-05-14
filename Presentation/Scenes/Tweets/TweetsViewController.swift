@@ -14,6 +14,7 @@ import Domain
 
 public protocol TweetsDisplayLogic {
     func displayTweets(viewModel: Tweets.GetTweets.ViewModel)
+    func displayTitle(viewModel: Tweets.GetUserScreenName.ViewModel)
 }
 
 public class TweetsViewController: UIViewController {
@@ -49,6 +50,7 @@ public class TweetsViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         getTweets()
+        getTitle()
     }
     
     func setActivityIndicator(visible: Bool) {
@@ -71,6 +73,11 @@ public class TweetsViewController: UIViewController {
         interactor.getTweets(request: request)
     }
     
+    func getTitle() {
+        let request = Tweets.GetUserScreenName.Request()
+        interactor.getUserScreenName(request: request)
+    }
+    
     @IBAction func tryAgain() {
         getTweets()
     }
@@ -79,6 +86,10 @@ public class TweetsViewController: UIViewController {
 extension TweetsViewController: TweetsDisplayLogic {
     public func displayTweets(viewModel: Tweets.GetTweets.ViewModel) {
         content = viewModel.content
+    }
+    
+    public func displayTitle(viewModel: Tweets.GetUserScreenName.ViewModel) {
+        title = viewModel.screenName
     }
 }
 

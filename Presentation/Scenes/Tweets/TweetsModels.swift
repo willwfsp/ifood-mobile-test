@@ -22,4 +22,16 @@ public struct Tweets {
             public let content: Content<[TweetTableViewCell.ViewModel]>
         }
     }
+    
+    public struct GetUserScreenName {
+        public struct Request { }
+        
+        public struct Response {
+            public let selectedUser: User
+        }
+        
+        public struct ViewModel {
+            public let screenName: String
+        }
+    }
 }

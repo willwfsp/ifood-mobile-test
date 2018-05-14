@@ -11,6 +11,7 @@ import Domain
 
 protocol TweetsBusinessLogic {
     func getTweets(request: Tweets.GetTweets.Request)
+    func getUserScreenName(request: Tweets.GetUserScreenName.Request)
     
     var selectedUser: User? { get set }
 }
@@ -29,9 +30,12 @@ class TweetsInteractor {
 
 extension TweetsInteractor: TweetsBusinessLogic {
     func getTweets(request: Tweets.GetTweets.Request) {
-//        getLoggedUserFriendsUseCase.execute() { [weak self] result in
-//            let response = Tweets.GetTweets.Response(result: result)
-//            self?.presenter.presentTweets(response: response)
-//        }
+
+    }
+    
+    func getUserScreenName(request: Tweets.GetUserScreenName.Request) {
+        guard let selectedUser = selectedUser else { return }
+        let response = Tweets.GetUserScreenName.Response(selectedUser: selectedUser)
+        presenter.presentUserScreenName(response: response)
     }
 }

@@ -10,6 +10,7 @@ import Foundation
 
 protocol TweetsPresentationLogic {
     func presentTweets(response: Tweets.GetTweets.Response)
+    func presentUserScreenName(response: Tweets.GetUserScreenName.Response)
 }
 
 struct TweetsPresenter {
@@ -25,5 +26,17 @@ extension TweetsPresenter: TweetsPresentationLogic {
         default:
             break
         }
+    }
+    
+    func presentUserScreenName(response: Tweets.GetUserScreenName.Response) {
+        var screenName = response.selectedUser.screenName ?? ""
+        if !screenName.isEmpty {
+            screenName = "@\(screenName)"
+        } else {
+            screenName = "Tweets"
+        }
+        
+        let viewModel = Tweets.GetUserScreenName.ViewModel(screenName: screenName)
+        view.displayTitle(viewModel: viewModel)
     }
 }
