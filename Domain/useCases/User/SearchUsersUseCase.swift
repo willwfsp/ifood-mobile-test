@@ -9,27 +9,40 @@
 import Foundation
 import Utils
 
-extension SearchUsersUseCase {
-    struct Request {
-        let term: String
+public extension SearchUsersUseCase {
+    public struct Request {
+        public let term: String
+        public init(term: String) {
+            self.term = term
+        }
     }
 }
 
-struct SearchUsersUseCase: UseCase {
-    typealias T = [User]
-    typealias R = Request
+public struct SearchUsersUseCase: UseCase {
+    public typealias T = [User]
+    public typealias R = Request
     
-    let repository: UserRepository
+    let userRepository: UserRepository
+    let sessionRepository: SessionRepository
     
-    init(repository: UserRepository) {
-        self.repository = repository
+    public init(userRepository: UserRepository, sessionRepository: SessionRepository) {
+        self.userRepository = userRepository
+        self.sessionRepository = sessionRepository
     }
 
-    func execute(request: Request? = nil, completion: @escaping (Result<[User]>) -> ()) {
+    public func execute(request: Request? = nil, completion: @escaping (Result<[User]>) -> ()) {
         guard let request = request else {
             completion(.failure(error: DomainError.missingRequest(onUseCase: "SearchUsersUseCase")))
             return
         }
-        repository.searchUsers(term: request.term) { completion($0) }
+        
+        sessionRepository.getSessionUserId {
+            switch $0 {
+            case let .success(userId):
+                self.userRepository.searchUsers(term: request.term) { completion($0) }
+            case let .failure(error):
+                completion(.failure(error: error))
+            }
+        }
     }
 }

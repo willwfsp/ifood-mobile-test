@@ -35,5 +35,11 @@ class DomainProvider {
                                    sessionRepository: $0.resolve(Domain.SessionRepository.self)!)
             
         }
+        
+        container.register(SearchUsersUseCase.self) {
+            SearchUsersUseCase(userRepository: $0.resolve(Domain.UserRepository.self)!,
+                               sessionRepository: $0.resolve(Domain.SessionRepository.self)!)
+            
+        }
     }
 }

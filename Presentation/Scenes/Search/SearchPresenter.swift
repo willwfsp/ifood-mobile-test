@@ -9,7 +9,7 @@
 import Foundation
 
 protocol SearchPresentationLogic {
-    func presentFriends(response: Search.GetFriends.Response)
+    func presentUsers(response: Search.GetUsers.Response)
 }
 
 struct SearchPresenter {
@@ -17,7 +17,7 @@ struct SearchPresenter {
 }
 
 extension SearchPresenter: SearchPresentationLogic {
-    func presentFriends(response: Search.GetFriends.Response) {
+    func presentUsers(response: Search.GetUsers.Response) {
         switch response.result {
         case let .success(users):
             typealias ViewModel = UserTableViewCell.ViewModel
@@ -35,7 +35,13 @@ extension SearchPresenter: SearchPresentationLogic {
                                  description: $0.description ?? "")
             }
             
-            let viewModel = Search.GetFriends.ViewModel(content: .data(data))
+            var term = "FRIENDS"
+            
+            if let unwrapedTerm = response.term {
+                term = "Results for \"\(unwrapedTerm)\"".uppercased()
+            }
+
+            let viewModel = Search.GetUsers.ViewModel(content: .data(data), term: term)
             view.displayFriends(viewModel: viewModel)
         default:
             break

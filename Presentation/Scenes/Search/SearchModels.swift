@@ -11,15 +11,23 @@ import Utils
 import Domain
 
 public struct Search {
-    public struct GetFriends {
-        public struct Request { }
+    public struct GetUsers {
+        public struct Request {
+            struct Friends { }
+            
+            struct Search {
+                let term: String
+            }
+        }
         
         public struct Response {
             public let result: Result<[User]>
+            public let term: String?
         }
         
         public struct ViewModel {
             public let content: Content<[UserTableViewCell.ViewModel]>
+            public let term: String
         }
     }
 }

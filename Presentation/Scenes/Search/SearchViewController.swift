@@ -13,7 +13,7 @@ import Store
 import Domain
 
 public protocol SearchDisplayLogic {
-    func displayFriends(viewModel: Search.GetFriends.ViewModel)
+    func displayFriends(viewModel: Search.GetUsers.ViewModel)
 }
 
 public class SearchViewController: UIViewController {
@@ -22,7 +22,9 @@ public class SearchViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var activityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet private weak var searchTermLabel: UILabel!
     
+    let searchController = UISearchController(searchResultsController: nil)
     var selectedIndex: Int? = nil
     
     var list: [UserTableViewCell.ViewModel] = [] {
@@ -50,6 +52,7 @@ public class SearchViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        setupSearchController()
         getFriends()
     }
     
@@ -67,9 +70,17 @@ public class SearchViewController: UIViewController {
         tableView.estimatedRowHeight = 84
     }
     
+    func setupSearchController() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search Users"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+    }
+
     func getFriends() {
         content = .loading
-        let request = Search.GetFriends.Request()
+        let request = Search.GetUsers.Request.Friends()
         interactor.getLoggedUserFriends(request: request)
     }
     
@@ -79,14 +90,16 @@ public class SearchViewController: UIViewController {
 }
 
 extension SearchViewController: SearchDisplayLogic {
-    public func displayFriends(viewModel: Search.GetFriends.ViewModel) {
+    public func displayFriends(viewModel: Search.GetUsers.ViewModel) {
         content = viewModel.content
+        searchTermLabel.text = viewModel.term
     }
 }
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UserTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+        
         cell.viewModel = list[indexPath.row]
         return cell
     }
@@ -98,5 +111,22 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedIndex = indexPath.row
         router.navigateToUserTweets()
+    }
+}
+
+extension SearchViewController: UISearchResultsUpdating {
+
+    func filterContentForSearchText(_ searchText: String) {
+        guard !searchText.isEmpty else {
+            getFriends()
+            return
+        }
+        let request = Search.GetUsers.Request.Search(term: searchText)
+        interactor.searchUsers(request: request)
+    }
+    
+    // MARK: - UISearchResultsUpdating Delegate
+    public func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text ?? "")
     }
 }

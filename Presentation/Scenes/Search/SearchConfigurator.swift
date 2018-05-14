@@ -15,8 +15,9 @@ public extension SearchViewController {
     public static func register(container: Container) {
         container.register(SearchBusinessLogic.self) { (r, view: SearchDisplayLogic) in
             let presenter = r.resolve(SearchPresentationLogic.self, argument: view)!
-            let useCase = r.resolve(GetLoggedUserFriendsUseCase.self)!
-            let interactor = SearchInteractor(presenter: presenter, getLoggedUserFriendsUseCase: useCase)
+            let friendsUseCase = r.resolve(GetLoggedUserFriendsUseCase.self)!
+            let searchUseCase = r.resolve(SearchUsersUseCase.self)!
+            let interactor = SearchInteractor(presenter: presenter, getLoggedUserFriendsUseCase: friendsUseCase, searchUsersUseCase: searchUseCase)
             return interactor
         }
         
