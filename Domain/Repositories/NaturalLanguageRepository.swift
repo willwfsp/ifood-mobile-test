@@ -7,3 +7,8 @@
 //
 
 import Foundation
+import Utils
+
+public protocol NaturalLanguageRepository {
+    func analyzeSentiment(text: String, completion: @escaping (Result<Sentence>) -> ())
+}

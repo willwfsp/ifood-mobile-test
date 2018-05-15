@@ -12,6 +12,6 @@ import Domain
 
 class UserRepositorySpy: UserRepository {
     func searchUsers(term: String, completion: (Result<[User]>) -> ()) {
-        completion(.failure(error: DomainError.unknown))
+        completion(.failure(DomainError.unknown))
     }
 }

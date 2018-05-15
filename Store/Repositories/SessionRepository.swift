@@ -23,12 +23,12 @@ public struct SessionRepository: Domain.SessionRepository {
             switch $0 {
             case let .success(client):
                 guard let userId = client.userID else {
-                    completion(.failure(error: JsonError.missingField("userID")))
+                    completion(.failure(JsonError.missingField("userID")))
                     return
                 }
-                completion(.success(data: userId))
+                completion(.success(userId))
             case let .failure(error):
-                completion(.failure(error: error))
+                completion(.failure(error))
             }
         }
     }

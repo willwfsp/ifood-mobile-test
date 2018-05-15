@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+public struct Sentence {
+    public let text: String?
+    public let score: Double?
+    
+    public init(text: String?, score: Double?) {
+        self.text = text
+        self.score = score
+    }
+}

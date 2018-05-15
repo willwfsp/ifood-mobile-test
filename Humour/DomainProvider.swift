@@ -23,6 +23,7 @@ class DomainProvider {
         
         container.autoregister(Domain.UserRepository.self, initializer: Store.UserRepository.init)
         container.autoregister(Domain.SessionRepository.self, initializer: Store.SessionRepository.init)
+        container.autoregister(Domain.NaturalLanguageRepository.self, initializer: Store.NaturalLanguageRepository.init)
 
         container.register(GetLoggedUserFriendsUseCase.self) {
             GetLoggedUserFriendsUseCase(userRepository: $0.resolve(Domain.UserRepository.self)!,
@@ -32,7 +33,8 @@ class DomainProvider {
         
         container.register(GetUserTimelineUseCase.self) {
             GetUserTimelineUseCase(userRepository: $0.resolve(Domain.UserRepository.self)!,
-                                   sessionRepository: $0.resolve(Domain.SessionRepository.self)!)
+                                   sessionRepository: $0.resolve(Domain.SessionRepository.self)!,
+                                   naturalLanguageRepository: $0.resolve(Domain.NaturalLanguageRepository.self)!)
             
         }
         

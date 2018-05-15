@@ -25,13 +25,13 @@ public struct UserRepository: Domain.UserRepository {
             case let .success(jsonResult):
                 do {
                     let users: [User] = try jsonResult.mapList()
-                    completion(.success(data: users))
+                    completion(.success(users))
                 } catch {
-                    completion(.failure(error: error))
+                    completion(.failure(error))
                 }
                
             case let .failure(error):
-                completion(.failure(error: error))
+                completion(.failure(error))
             }
         }
     }
@@ -42,13 +42,13 @@ public struct UserRepository: Domain.UserRepository {
             case let .success(jsonResult):
                 do {
                     let users: [Tweet] = try jsonResult.mapList()
-                    completion(.success(data: users))
+                    completion(.success(users))
                 } catch {
-                    completion(.failure(error: error))
+                    completion(.failure(error))
                 }
                 
             case let .failure(error):
-                completion(.failure(error: error))
+                completion(.failure(error))
             }
         }
     }
@@ -59,13 +59,13 @@ public struct UserRepository: Domain.UserRepository {
             case let .success(jsonResult):
                 do {
                     let friends: Friends = try jsonResult.map()
-                    completion(.success(data: friends.users))
+                    completion(.success(friends.users))
                 } catch {
-                    completion(.failure(error: error))
+                    completion(.failure(error))
                 }
                 
             case let .failure(error):
-                completion(.failure(error: error))
+                completion(.failure(error))
             }
         }
     }

@@ -15,6 +15,18 @@ protocol TweetsPresentationLogic {
 
 struct TweetsPresenter {
     let view: TweetsDisplayLogic
+    
+    func makeSentiment(score: Double?) -> (emoji: String, color: UIColor) {
+        guard let score = score else {
+            return ("", .clear)
+        }
+        
+        switch score {
+        case ..<(-0.1): return ("😔", .sadRed)
+        case -0.1..<0.1: return ("😐", .neutralGrey)
+        default: return ("😃", .happyGreen)
+        }
+    }
 }
 
 extension TweetsPresenter: TweetsPresentationLogic {
@@ -24,7 +36,12 @@ extension TweetsPresenter: TweetsPresentationLogic {
             typealias ViewModel = TweetTableViewCell.ViewModel
             
             let data: [ViewModel] = tweets.map {
-                ViewModel(text: $0.text ?? "", date: $0.createdDate ?? "", emoji: "😐", happinesColor: .neutralGrey)
+                let sentiment = makeSentiment(score: $0.sentence?.score)
+                
+                return ViewModel(text: $0.sentence?.text ?? "",
+                                 date: $0.createdDate ?? "",
+                                 emoji: sentiment.emoji,
+                                 happinesColor: sentiment.color)
             }
             
             let viewModel = Tweets.GetTweets.ViewModel(content: .data(data))

@@ -9,8 +9,8 @@
 import Foundation
 
 public enum Result<T> {
-    case success(data: T)
-    case failure(error: Error)
+    case success(T)
+    case failure(Error)
     
     public var data: T? {
         if case let .success(data) = self {

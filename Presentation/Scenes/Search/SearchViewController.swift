@@ -7,10 +7,9 @@
 //
 
 import UIKit
-import TwitterKit
 import Reusable
-import Store
 import Domain
+import Store
 
 public protocol SearchDisplayLogic {
     func displayFriends(viewModel: Search.GetUsers.ViewModel)

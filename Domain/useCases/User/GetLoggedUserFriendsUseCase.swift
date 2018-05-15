@@ -33,7 +33,7 @@ public struct GetLoggedUserFriendsUseCase: UseCase {
             case let .success(userId):
                 self.userRepository.friends(userId: userId) { completion($0) }
             case let .failure(error):
-                completion(.failure(error: error))
+                completion(.failure(error))
             }
         }
         

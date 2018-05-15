@@ -14,7 +14,7 @@ class ResultTests: XCTestCase {
     func testSuccessShouldPassAnyDataThroughCase() {
         // Given
         let data = "Given String"
-        let sut = Result<String>.success(data: data)
+        let sut = Result<String>.success(data)
         
         // When
         let disclosuredData = sut.data!
@@ -26,7 +26,7 @@ class ResultTests: XCTestCase {
     func testFailureShouldPassAnyErrorThroughCase() {
         // Given
         let error = ResultErrorSpy.somethingWrong
-        let sut = Result<String>.failure(error: error)
+        let sut = Result<String>.failure(error)
         
         // When
         let disclosuredError = sut.error as! ResultErrorSpy
@@ -37,7 +37,7 @@ class ResultTests: XCTestCase {
     
     func testShouldReturnNilDataWhenTheResultIsFailure() {
         // Given
-        let sut = Result<String>.failure(error: NSError())
+        let sut = Result<String>.failure(NSError())
         
         // When
         let data = sut.data
@@ -48,7 +48,7 @@ class ResultTests: XCTestCase {
     
     func testShouldReturnNilErrorWhenTheResultIsSuccess() {
         // Given
-        let sut = Result<String>.success(data: "")
+        let sut = Result<String>.success("")
         
         // When
         let error = sut.error

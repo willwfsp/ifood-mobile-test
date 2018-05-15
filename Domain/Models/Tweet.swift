@@ -10,12 +10,12 @@ import Foundation
 
 public struct Tweet {
     public let id: String
-    public let text: String?
+    public let sentence: Sentence?
     public let createdDate: String?
     
-    public init(id: String, text: String?, createdDate: String?) {
+    public init(id: String, sentence: Sentence?, createdDate: String?) {
         self.id = id
-        self.text = text
+        self.sentence = sentence
         self.createdDate = createdDate
     }
     

@@ -11,8 +11,8 @@ import Utils
 
 struct GoogleSentimentApiEntity {
     struct Sentiment {
-        let magnitude: Float?
-        let score: Float?
+        let magnitude: Double?
+        let score: Double?
     }
     
     struct Sentence {
@@ -39,8 +39,8 @@ extension GoogleSentimentApiEntity.Sentence.Text: JsonConvertible {
 
 extension GoogleSentimentApiEntity.Sentiment: JsonConvertible {
     init(with json: JsonObject?) throws {
-        magnitude = json?["magnitude"] as? Float
-        score = json?["score"] as? Float
+        magnitude = json?["magnitude"] as? Double
+        score = json?["score"] as? Double
     }
 }
 

@@ -27,12 +27,9 @@ class StoreProvider {
         container.register(TwitterDataSource.self) { _ in
             TwitterDataSource(twitter: twitter)
         }
-        container.register(UserRepository.self) {
-            UserRepository(dataSource: $0.resolve(TwitterDataSource.self)!)
-        }
         
-        container.register(SessionRepository.self) {
-            SessionRepository(dataSource: $0.resolve(TwitterDataSource.self)!)
+        container.register(RestDataSource.self) { (r) -> RestDataSource<NaturalLanguageService> in
+            RestDataSource<NaturalLanguageService>()
         }
     }
 }

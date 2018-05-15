@@ -33,10 +33,11 @@ public struct TwitterDataSource {
 
         var clientError : NSError?
         
-        let request = client.urlRequest(withMethod: target.method.rawValue,
+        var request = client.urlRequest(withMethod: target.method.rawValue,
                                         urlString: target.endpoint,
-                                        parameters: target.paramethers,
+                                        parameters: target.parameters,
                                         error: &clientError)
+        request.timeoutInterval = 15
         
         client.sendTwitterRequest(request) { (response, data, connectionError) -> Void in
             do {
@@ -47,9 +48,9 @@ public struct TwitterDataSource {
                 let json = try JSONSerialization.jsonObject(with: data!, options: [])
                 let jsonResult = try JsonResult(any: json)
                 
-                completion(.success(data: jsonResult))
+                completion(.success(jsonResult))
             } catch {
-                completion(.failure(error: error))
+                completion(.failure(error))
             }
         }
     }
@@ -57,14 +58,14 @@ public struct TwitterDataSource {
     public func getApiClient(completion: @escaping (Result<TWTRAPIClient>) -> ()) {
         if twitter.sessionStore.hasLoggedInUsers(),
             let session = twitter.sessionStore.session() {
-            completion(.success(data: TWTRAPIClient(userID: session.userID)))
+            completion(.success(TWTRAPIClient(userID: session.userID)))
             return
         }
         
         twitter.logIn { (session, error) in
             guard let userID = session?.userID else { return }
             
-            completion(.success(data: TWTRAPIClient(userID: userID)))
+            completion(.success(TWTRAPIClient(userID: userID)))
         }
     }
     

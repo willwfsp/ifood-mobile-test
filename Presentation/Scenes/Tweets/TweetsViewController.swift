@@ -7,9 +7,7 @@
 //
 
 import UIKit
-import TwitterKit
 import Reusable
-import Store
 import Domain
 
 public protocol TweetsDisplayLogic {

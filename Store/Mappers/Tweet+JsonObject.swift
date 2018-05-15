@@ -18,6 +18,8 @@ extension Tweet: JsonConvertible {
         let text = json?["text"] as? String
         let createdDate = json?["created_at"] as? String
         
-        self.init(id: id, text: text, createdDate: createdDate)
+        let sentence = Sentence(text: text, score: nil)
+        
+        self.init(id: id, sentence: sentence, createdDate: createdDate)
     }
 }

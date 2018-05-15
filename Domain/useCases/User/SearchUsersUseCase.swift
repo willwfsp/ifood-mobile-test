@@ -32,7 +32,7 @@ public struct SearchUsersUseCase: UseCase {
 
     public func execute(request: Request? = nil, completion: @escaping (Result<[User]>) -> ()) {
         guard let request = request else {
-            completion(.failure(error: DomainError.missingRequest(onUseCase: "SearchUsersUseCase")))
+            completion(.failure(DomainError.missingRequest(onUseCase: "SearchUsersUseCase")))
             return
         }
         
@@ -41,7 +41,7 @@ public struct SearchUsersUseCase: UseCase {
             case let .success(userId):
                 self.userRepository.searchUsers(term: request.term) { completion($0) }
             case let .failure(error):
-                completion(.failure(error: error))
+                completion(.failure(error))
             }
         }
     }
