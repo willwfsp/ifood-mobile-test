@@ -50,7 +50,7 @@ public struct TwitterDataSource {
                 
                 completion(.success(jsonResult))
             } catch {
-                completion(.failure(error))
+                completion(.failure(error.genericError))
             }
         }
     }

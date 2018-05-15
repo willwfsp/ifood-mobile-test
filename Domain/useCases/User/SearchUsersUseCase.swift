@@ -38,7 +38,7 @@ public struct SearchUsersUseCase: UseCase {
         
         sessionRepository.getSessionUserId {
             switch $0 {
-            case let .success(userId):
+            case let .success:
                 self.userRepository.searchUsers(term: request.term) { completion($0) }
             case let .failure(error):
                 completion(.failure(error))

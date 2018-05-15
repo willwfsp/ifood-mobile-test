@@ -1,14 +1,5 @@
 PODS:
   - Alamofire (4.7.2)
-  - AppAuth (0.92.0)
-  - GTMAppAuth (0.7.0):
-    - AppAuth (~> 0.92.0)
-    - GTMSessionFetcher (~> 1.1)
-  - GTMSessionFetcher (1.1.15):
-    - GTMSessionFetcher/Full (= 1.1.15)
-  - GTMSessionFetcher/Core (1.1.15)
-  - GTMSessionFetcher/Full (1.1.15):
-    - GTMSessionFetcher/Core (= 1.1.15)
   - Kingfisher (4.7.0)
   - Moya (11.0.2):
     - Moya/Core (= 11.0.2)
@@ -31,7 +22,6 @@ PODS:
     - TwitterCore (>= 3.1.0)
 
 DEPENDENCIES:
-  - GTMAppAuth
   - Kingfisher (~> 4.0)
   - Moya (~> 11.0)
   - Reusable (~> 4.0)
@@ -43,9 +33,6 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - AppAuth
-    - GTMAppAuth
-    - GTMSessionFetcher
     - Kingfisher
     - Moya
     - Result
@@ -58,9 +45,6 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
-  AppAuth: 3f4f1d6d85ad631d0bbf15ffcdc10c447face97a
-  GTMAppAuth: 8d724be29ab8f2f6d35b2bf929d76340c9d1f1b1
-  GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
   Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
@@ -71,6 +55,6 @@ SPEC CHECKSUMS:
   TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
   TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: c593a111656c5a63e008702afd84ae131d494197
+PODFILE CHECKSUM: 3f02b35eef595fb2a92a3cd8a8eb95e29a511dad
 
 COCOAPODS: 1.5.2

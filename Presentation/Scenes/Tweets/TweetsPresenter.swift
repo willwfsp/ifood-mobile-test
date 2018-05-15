@@ -46,8 +46,11 @@ extension TweetsPresenter: TweetsPresentationLogic {
             
             let viewModel = Tweets.GetTweets.ViewModel(content: .data(data))
             view.displayTweets(viewModel: viewModel)
-        default:
-            break
+        case let .failure(error):
+            let userError = UserError(title: error.title, localizedDescription: error.localizedDescription, style: .alert)
+            
+            let viewModel = Tweets.GetTweets.ViewModel(content: .error(userError))
+            view.displayTweets(viewModel: viewModel)
         }
     }
     

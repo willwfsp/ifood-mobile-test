@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import Utils
 
-public enum DomainError: Error {
+public enum DomainError: DescribableError {
     case missingRequest(onUseCase: String)
     case unknown
     
-    var localizedDescription: String {
+    public var localizedDescription: String {
         switch self {
         case let .missingRequest(useCase):
             return "The useCase \(useCase) requires an request to procceed"
@@ -21,7 +22,7 @@ public enum DomainError: Error {
         }
     }
     
-    var localizedTitle: String {
+    public var title: String {
         return "Domain Error"
     }
 }

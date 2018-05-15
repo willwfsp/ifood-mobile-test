@@ -15,7 +15,7 @@ public protocol TweetsDisplayLogic {
     func displayTitle(viewModel: Tweets.GetUserScreenName.ViewModel)
 }
 
-public class TweetsViewController: UIViewController {
+public class TweetsViewController: UIViewController, ShowError {
     var interactor: TweetsBusinessLogic! = nil
     
     
@@ -35,7 +35,8 @@ public class TweetsViewController: UIViewController {
             switch content {
             case let .data(list):
                 self.list = list
-            case .error: break
+            case let .error(error):
+                display(error: error)
             case .loading:
                 setActivityIndicator(visible: true)
             case .empty:

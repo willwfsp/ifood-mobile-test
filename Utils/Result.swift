@@ -10,7 +10,7 @@ import Foundation
 
 public enum Result<T> {
     case success(T)
-    case failure(Error)
+    case failure(DescribableError)
     
     public var data: T? {
         if case let .success(data) = self {

@@ -43,8 +43,11 @@ extension SearchPresenter: SearchPresentationLogic {
 
             let viewModel = Search.GetUsers.ViewModel(content: .data(data), term: term)
             view.displayFriends(viewModel: viewModel)
-        default:
-            break
+        case let .failure(error):
+            let userError = UserError(title: error.title, localizedDescription: error.localizedDescription, style: .alert)
+            
+            let viewModel = Search.GetUsers.ViewModel(content: .error(userError), term: "")
+            view.displayFriends(viewModel: viewModel)
         }
     }
 }

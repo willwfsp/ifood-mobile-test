@@ -15,7 +15,7 @@ public protocol SearchDisplayLogic {
     func displayFriends(viewModel: Search.GetUsers.ViewModel)
 }
 
-public class SearchViewController: UIViewController {
+public class SearchViewController: UIViewController, ShowError {
     var interactor: SearchBusinessLogic! = nil
     var router: SearchRouter! = nil
     
@@ -39,7 +39,8 @@ public class SearchViewController: UIViewController {
             switch content {
             case let .data(list):
                 self.list = list
-            case .error: break
+            case let .error(error):
+                display(error: error)
             case .loading:
                 setActivityIndicator(visible: true)
             case .empty:

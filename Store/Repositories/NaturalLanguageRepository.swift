@@ -31,7 +31,7 @@ public struct NaturalLanguageRepository: Domain.NaturalLanguageRepository {
                     let sentence = Sentence(text: text, score: entity.documentSentiment?.score)
                     completion(.success(sentence))
                 } catch {
-                    completion(.failure(error))
+                    completion(.failure(error.genericError))
                 }
 
             case let .failure(error):
