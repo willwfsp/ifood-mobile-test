@@ -28,8 +28,8 @@ class StoreProvider {
             TwitterDataSource(twitter: twitter)
         }
         
-        container.register(RestDataSource.self) { (r) -> RestDataSource<NaturalLanguageService> in
-            RestDataSource<NaturalLanguageService>()
+        container.register(RestDataSource.self) { (r) -> RestDataSource<GoogleService> in
+            RestDataSource<GoogleService>()
         }
     }
 }

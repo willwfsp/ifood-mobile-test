@@ -35,19 +35,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GjT-jm-Wcx">
-                                                    <rect key="frame" x="0.0" y="0.0" width="40" height="199.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="38" height="199.5"/>
                                                     <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.80000000000000004" alpha="0.62381712147887325" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="40" id="jgj-6l-lp6"/>
+                                                        <constraint firstAttribute="width" constant="38" id="jgj-6l-lp6"/>
                                                     </constraints>
                                                 </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eS5-VK-XE4">
                                                     <rect key="frame" x="15" y="11" width="345" height="178"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😐" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7D-s2-WNK">
-                                                            <rect key="frame" x="0.0" y="0.0" width="46" height="48"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="48" id="rtg-2s-GRO"/>
+                                                                <constraint firstAttribute="height" constant="46" id="Ufp-7f-T4W"/>
+                                                                <constraint firstAttribute="width" constant="46" id="WtX-Q6-WQA"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                                             <nil key="textColor"/>

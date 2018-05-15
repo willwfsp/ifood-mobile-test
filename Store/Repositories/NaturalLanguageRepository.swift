@@ -11,9 +11,9 @@ import Domain
 import Utils
 
 public struct NaturalLanguageRepository: Domain.NaturalLanguageRepository {
-    let dataSource: RestDataSource<NaturalLanguageService>
+    let dataSource: RestDataSource<GoogleService>
     
-    public init(dataSource: RestDataSource<NaturalLanguageService>) {
+    public init(dataSource: RestDataSource<GoogleService>) {
         self.dataSource = dataSource
     }
     
