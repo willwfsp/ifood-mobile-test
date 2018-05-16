@@ -31,7 +31,7 @@ public struct UserRepository: Domain.UserRepository {
                 }
                
             case let .failure(error):
-                completion(.failure(error.genericError))
+                completion(.failure(error))
             }
         }
     }

@@ -24,7 +24,8 @@ public struct TwitterDataSource {
                 self.send(target: target, client: client) {
                     completion($0)
                 }
-            case .failure: break
+            case let .failure(error):
+                completion(.failure(error))
             }
         }
     }
@@ -50,7 +51,7 @@ public struct TwitterDataSource {
                 
                 completion(.success(jsonResult))
             } catch {
-                completion(.failure(error.genericError))
+                completion(.failure(error.httpError))
             }
         }
     }

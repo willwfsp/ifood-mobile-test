@@ -117,7 +117,8 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 extension SearchViewController: UISearchResultsUpdating {
 
     func filterContentForSearchText(_ searchText: String) {
-        guard !searchText.isEmpty else {
+        let text = searchText.trimmingCharacters(in: .whitespaces)
+        guard !text.isEmpty else {
             getFriends()
             return
         }
