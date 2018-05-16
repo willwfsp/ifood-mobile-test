@@ -89,7 +89,7 @@ extension Describable {
 
 extension NSError {
     public func describableError() -> DescribableError{
-        return GenericError(title: domain, localizedDescription: localizedDescription)
+        return GenericError(title: domain , localizedDescription: localizedDescription)
     }
     
     public func httpError() -> HTTPError {

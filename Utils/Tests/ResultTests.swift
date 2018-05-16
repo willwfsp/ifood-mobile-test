@@ -37,7 +37,7 @@ class ResultTests: XCTestCase {
     
     func testShouldReturnNilDataWhenTheResultIsFailure() {
         // Given
-        let sut = Result<String>.failure(NSError())
+        let sut = Result<String>.failure(GenericError(title: "", localizedDescription: ""))
         
         // When
         let data = sut.data
@@ -58,6 +58,10 @@ class ResultTests: XCTestCase {
     }
 }
 
-enum ResultErrorSpy: Error {
+enum ResultErrorSpy: DescribableError {
+    var title: String {
+        return ""
+    }
+    
     case somethingWrong
 }
