@@ -77,6 +77,40 @@ The app was developed using the [Uncle Bob Clean Architecture](https://8thlight.
 
 Motivated by code reuse and build improvements, the app was divided in packages (Dynamic Frameworks). Wich one with it's responsibility
 
-WIP
+### External Dependencies
+
+The [CocoaPods](https://cocoapods.org/) was choose was dependency manager because it more faster and provide automatic project configuration. But the build time increases. The cocoapods was the best choice for this moment.
+
+### Dependency Injection
+
+This architecture provide scalability and was designed to suport dependency injections. All modules are agnostic and its dependencies can be injected to reproduce any environment you want. The dependency injection was resolved by usign Swinject framework
+
+### Testing
+
+At the begining of project, an TDD was started, but due to the short time its was cancelled. Yes, the tests is always the first to fall 😔.
+
+### Presentation
+
+On the presentation layer, the [Clean Swift VIP, by Raymond Law](https://clean-swift.com/) was choose. Some apdats was done. The Worker and DataSource was replaced by the Uncle Bob UseCases and so on. This VIP aproach provide a better testability and manutenibility for this app layer.
+
+### Components
+
+- Moya: REST easier
+- TwitterKit: Provide an easy Twitter API consumption
+- Swinject: Dependency Injection
+- Reusable: TableViewCells and Custom Views with less code
+
+### Improvements
+
+- **Reactive Extensions**: As I used in only one project, I could lose a lot of development time, since I do not dominate the approach
+- **LocalizableStrings**: As the first release will only suport english language, and its contains few strings, I omitted it.
+- **Constants**: Some constants was created, but could be created for Identifiers, Localizables and all literals in the app.
+- **Testing**: The code should have 100% test coverage
+- **Persistency**: The tweets already classified by Google Natural Language should be stored. It will save internet consumption, request time for the user, and avoid some billings on the Google Cloud Services.
+- **Themes**: The app should be designed suporting diferent color themes.
+- **Build Configuration**: Diferent Build Configurations should be set.
+
+
+
 
 
