@@ -25,9 +25,11 @@ For this version, the design was based on default iOS 11 style, without any addi
 
 ### Search Scene
 
-![Login](https://github.com/willwfsp/ifood-mobile-test/blob/master/Images/Login.png | width=50)
-![Friends](https://github.com/willwfsp/ifood-mobile-test/blob/master/Images/Friends.png =50x)
-![Search](https://github.com/willwfsp/ifood-mobile-test/blob/master/Images/Search.png =50x)
+![Login](https://github.com/willwfsp/ifood-mobile-test/blob/master/Images/Login.png)
+
+![Friends](https://github.com/willwfsp/ifood-mobile-test/blob/master/Images/Friends.png)
+
+![Search](https://github.com/willwfsp/ifood-mobile-test/blob/master/Images/Search.png)
 
 #### Structure
 
