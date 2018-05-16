@@ -25,7 +25,9 @@ For this version, the design was based on default iOS 11 style, without any addi
 
 ### Search Scene
 
-![Search Scene Image](http://...)
+![Login](https://github.com/willwfsp/ifood-mobile-test/blob/master/Images/Login.png)
+![Friends](https://github.com/willwfsp/ifood-mobile-test/blob/master/Images/Friends.png)
+![Search](https://github.com/willwfsp/ifood-mobile-test/blob/master/Images/Search.png)
 
 #### Structure
 
@@ -52,7 +54,7 @@ By selecting one listed user, you will forwarded to **Tweets Scene**.
 
 ### Tweets Scene
 
-![Tweeter Scene Image](http://...)
+![Search](https://github.com/willwfsp/ifood-mobile-test/blob/master/Images/Tweets.png)
 
 #### Structure
 
