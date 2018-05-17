@@ -113,6 +113,7 @@ On the presentation layer, the [Clean Swift VIP, by Raymond Law](https://clean-s
 - **Persistency**: The tweets already classified by Google Natural Language should be stored. It will save internet consumption, request time for the user, and avoid some billings on the Google Cloud Services.
 - **Themes**: The app should be designed suporting diferent color themes.
 - **Build Configuration**: Diferent Build Configurations should be set.
+- **Warnings**: As an simple setup, the packages was set with shared Info.plist. And it's generating some warnings.
 - **My English**: It's been almost 3 years since I quit the English classes. I've never been fluent, but I've been better. I going to back to the classes this semester, urgently!!
 
 ## Considetations
