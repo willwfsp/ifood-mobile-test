@@ -74,7 +74,7 @@
 		7DCC3E5620A6A0AE00D9C268 /* SearchUsersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC3E5520A6A0AD00D9C268 /* SearchUsersUseCase.swift */; };
 		7DCC3E5920A6A13700D9C268 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC3E5820A6A13700D9C268 /* User.swift */; };
 		7DCD435D20A9AC4800B179DA /* GoogleSentimentApiEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCD435C20A9AC4800B179DA /* GoogleSentimentApiEntity.swift */; };
-		7DCD435F20A9B12400B179DA /* RestDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCD435E20A9B12400B179DA /* RestDataStore.swift */; };
+		7DE9376C20B73C4A00805D7F /* RestDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE9376B20B73C4A00805D7F /* RestDataStore.swift */; };
 		7DF5DEBC20A78E39003F29B0 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF5DEBB20A78E38003F29B0 /* SafariServices.framework */; };
 		7DF5DEBE20A7CBC2003F29B0 /* TwitterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DEBD20A7CBC2003F29B0 /* TwitterDataSource.swift */; };
 		7DF5DEC020A7D0A5003F29B0 /* TwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5DEBF20A7D0A5003F29B0 /* TwitterService.swift */; };
@@ -295,7 +295,7 @@
 		7DCC3E5520A6A0AD00D9C268 /* SearchUsersUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsersUseCase.swift; sourceTree = "<group>"; };
 		7DCC3E5820A6A13700D9C268 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7DCD435C20A9AC4800B179DA /* GoogleSentimentApiEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSentimentApiEntity.swift; sourceTree = "<group>"; };
-		7DCD435E20A9B12400B179DA /* RestDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestDataStore.swift; path = ../../../../../Desktop/RestDataStore.swift; sourceTree = "<group>"; };
+		7DE9376B20B73C4A00805D7F /* RestDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestDataStore.swift; sourceTree = "<group>"; };
 		7DF5DEBB20A78E38003F29B0 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		7DF5DEBD20A7CBC2003F29B0 /* TwitterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterDataSource.swift; sourceTree = "<group>"; };
 		7DF5DEBF20A7D0A5003F29B0 /* TwitterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterService.swift; sourceTree = "<group>"; };
@@ -666,7 +666,7 @@
 		7DCC3E4420A695C600D9C268 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				7DCD435E20A9B12400B179DA /* RestDataStore.swift */,
+				7DE9376B20B73C4A00805D7F /* RestDataStore.swift */,
 				7DF5DEBD20A7CBC2003F29B0 /* TwitterDataSource.swift */,
 				7DF5DEBF20A7D0A5003F29B0 /* TwitterService.swift */,
 				7D0CBB6920AA648D004F387F /* GoogleService.swift */,
@@ -1628,9 +1628,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DE9376C20B73C4A00805D7F /* RestDataStore.swift in Sources */,
 				7DF5DECF20A7F4BE003F29B0 /* SessionRepository.swift in Sources */,
 				7DF5DEBE20A7CBC2003F29B0 /* TwitterDataSource.swift in Sources */,
-				7DCD435F20A9B12400B179DA /* RestDataStore.swift in Sources */,
 				7DF5DEC920A7EE9B003F29B0 /* Friends.swift in Sources */,
 				7DF5DEC720A7E9C4003F29B0 /* Tweet+JsonObject.swift in Sources */,
 				7D0CBB6A20AA648D004F387F /* GoogleService.swift in Sources */,
